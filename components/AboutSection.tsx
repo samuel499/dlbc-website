@@ -6,11 +6,12 @@ import svgPaths from "../imports/svg-x6toc1biup";
 import imgFrame2121453193 from "../assets/ee58c30feb4a35ed12879e27d4ea798a62e51be8.png";
 import imgFrame2121453194 from "../assets/ab5b177bac98f4160531363f92b969c748fb3991.png";
 import imgFrame2121453195 from "../assets/9e910c2cd3241d00a70a6e70808946855fa74d16.png";
+import Image from "next/image";
 
 function Frame2121453193() {
   return (
     <div className="h-[180px] md:h-[242.388px] relative rounded-[20px] md:rounded-[30px] shadow-[0px_0px_40px_10px_rgba(76,175,232,0.25)] w-[130px] md:w-[177.751px]">
-      <img alt="Church community gathering" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[20px] md:rounded-[30px] size-full" src={imgFrame2121453193} />
+      <Image alt="Church community gathering" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[20px] md:rounded-[30px] size-full" src={imgFrame2121453193} />
     </div>
   );
 }
@@ -19,7 +20,7 @@ function Frame2121453194() {
   return (
     <div className="h-[165px] md:h-[223.617px] relative rounded-[20px] md:rounded-[30px] shadow-[0px_0px_40px_10px_rgba(76,175,232,0.25)] w-[130px] md:w-[177.69px]">
       <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[20px] md:rounded-[30px]">
-        <img alt="Church service" className="absolute h-[108.36%] left-[-40.7%] max-w-none top-[-7.99%] w-[181.82%]" src={imgFrame2121453194} />
+        <Image alt="Church service" className="absolute h-[108.36%] left-[-40.7%] max-w-none top-[-7.99%] w-[181.82%]" src={imgFrame2121453194} />
       </div>
     </div>
   );
@@ -29,7 +30,7 @@ function Frame2121453196() {
   return (
     <div className="h-[165px] md:h-[223.617px] relative rounded-[20px] md:rounded-[30px] shadow-[0px_0px_40px_10px_rgba(76,175,232,0.25),0px_4px_4px_0px_rgba(0,0,0,0.25)] w-[130px] md:w-[177.69px]">
       <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[20px] md:rounded-[30px]">
-        <img alt="Church worship" className="absolute h-[108.36%] left-[-40.7%] max-w-none top-[-7.99%] w-[181.82%]" src={imgFrame2121453194} />
+        <Image alt="Church worship" className="absolute h-[108.36%] left-[-40.7%] max-w-none top-[-7.99%] w-[181.82%]" src={imgFrame2121453194} />
       </div>
     </div>
   );
@@ -38,7 +39,7 @@ function Frame2121453196() {
 function Frame2121453195() {
   return (
     <div className="h-[105px] md:h-[140.731px] relative rounded-[20px] md:rounded-[30px] shadow-[0px_0px_40px_10px_rgba(76,175,232,0.25)] w-[165px] md:w-[222.206px]">
-      <img alt="Church members" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[20px] md:rounded-[30px] size-full" src={imgFrame2121453195} />
+      <Image alt="Church members" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[20px] md:rounded-[30px] size-full" src={imgFrame2121453195} />
     </div>
   );
 }

@@ -5,6 +5,7 @@ import { useRef, useState } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import svgPaths from "../imports/svg-7f1kt38i0r";
 import imgFrame2121453211 from "../assets/d6d87d449b601242cf48ff584d9fa7432836c574.png";
+import Image from "next/image";
 
 interface Event {
   id: number;
@@ -91,7 +92,7 @@ function EventCard({ event, index, onSeeMore }: EventCardProps) {
       {/* Background Image */}
       <div className="absolute h-[570px] left-[calc(50%-169px)] top-0 translate-x-[-50%] w-[1006px]">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <img alt="" className="absolute h-[182.05%] left-[0.38%] max-w-none top-[0.85%] w-full object-cover" src={imgFrame2121453211} />
+          <Image alt="" className="absolute h-[182.05%] left-[0.38%] max-w-none top-[0.85%] w-full object-cover" src={imgFrame2121453211} />
         </div>
       </div>
 

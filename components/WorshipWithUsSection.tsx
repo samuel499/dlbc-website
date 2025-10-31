@@ -3,6 +3,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import imgPastorKumuyi31 from "../assets/89fa95729f4951199dc1e0214d5900ff429b178a.png";
+import Image from "next/image";
 
 function ServiceCard({ 
   day, 
@@ -203,7 +204,7 @@ export function WorshipWithUsSection() {
           transition={{ duration: 1.2, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <img alt="Pastor Kumuyi" className="absolute h-full left-[-19.81%] max-w-none top-0 w-[147.4%]" src={imgPastorKumuyi31} />
+            <Image alt="Pastor Kumuyi" className="absolute h-full left-[-19.81%] max-w-none top-0 w-[147.4%]" src={imgPastorKumuyi31} />
           </div>
         </motion.div>
 

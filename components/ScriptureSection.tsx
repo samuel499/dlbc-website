@@ -3,6 +3,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import imgScriptureBackground from "../assets/e4826e1bdee620140fad4b256ff6105ab825a1e1.png";
+import Image from "next/image";
 
 export function ScriptureSection() {
   const ref = useRef(null);
@@ -15,7 +16,7 @@ export function ScriptureSection() {
     >
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img 
+        <Image 
           alt="" 
           className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" 
           src={imgScriptureBackground} 

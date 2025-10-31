@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Navigation, MousePointer } from 'lucide-react';
 import { useState } from 'react';
 import imgMapImage from "../assets/102280c9c92381e2f30567e6847f414120be06f4.png";
+import Image from "next/image";
 
 export function InteractiveMap() {
   const [isHovered, setIsHovered] = useState(false);
@@ -29,7 +30,7 @@ export function InteractiveMap() {
       {/* Map Container */}
       <div className="relative w-full h-full rounded-lg shadow-lg overflow-hidden border-2 border-[#4cafe8]">
         {/* Actual Map Image */}
-        <img 
+        <Image 
           src={imgMapImage} 
           alt="Map showing Deeper Life Bible Church location" 
           className="absolute inset-0 w-full h-full object-cover"

@@ -4,6 +4,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import svgPaths from "../imports/svg-q4tqebegkv";
 import imgPastorKumuyi311 from "../assets/e63d112cea8d304bc6fd2f9365bd4f93c00bde7d.png";
+import Image from "next/image";
 
 export function WhatWeBelieveSection() {
   const ref = useRef(null);
@@ -106,7 +107,7 @@ export function WhatWeBelieveSection() {
               {/* Pastor Image */}
               <div className="absolute h-[350px] w-[300px] left-1/2 -translate-x-1/2 top-0">
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                  <img alt="Pastor Dr W.F Kumuyi" className="absolute h-[100.28%] left-[-39.01%] max-w-none top-[4.73%] w-[197.49%]" src={imgPastorKumuyi311} />
+                  <Image alt="Pastor Dr W.F Kumuyi" className="absolute h-[100.28%] left-[-39.01%] max-w-none top-[4.73%] w-[197.49%]" src={imgPastorKumuyi311} />
                 </div>
               </div>
 
@@ -161,7 +162,7 @@ export function WhatWeBelieveSection() {
             {/* Pastor Image */}
             <div className="absolute h-[887px] left-0 top-0 w-[789px]">
               <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <img alt="Pastor Dr W.F Kumuyi" className="absolute h-[100.28%] left-[-39.01%] max-w-none top-[4.73%] w-[197.49%]" src={imgPastorKumuyi311} />
+                <Image alt="Pastor Dr W.F Kumuyi" className="absolute h-[100.28%] left-[-39.01%] max-w-none top-[4.73%] w-[197.49%]" src={imgPastorKumuyi311} />
               </div>
             </div>
 

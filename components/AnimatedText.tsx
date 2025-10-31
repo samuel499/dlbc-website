@@ -23,11 +23,11 @@ export function AnimatedText() {
   }, [texts.length]);
 
   return (
-    <div className="hidden md:block absolute h-[250px] md:h-[300px] lg:h-[390px] left-4 md:left-1/2 top-[140px] md:top-[160px] lg:top-[188px] right-4 md:right-auto md:w-[400px] lg:w-[553px] overflow-hidden z-10">
+    <div className="hidden md:block absolute h-[250px] md:h-[300px] lg:h-[390px] left-4 md:left-1/2 top-[140px] md:top-40 lg:top-[188px] right-4 md:right-auto md:w-[400px] lg:w-[553px] overflow-hidden z-10">
       <motion.p 
         ref={textRef}
         key={currentIndex}
-        className="font-['TacticSans-ThnIt:Italic',_sans-serif] h-[250px] md:h-[300px] lg:h-[390px] italic leading-[1.1] md:leading-[1.15] lg:leading-[normal] text-[48px] md:text-[60px] lg:text-[80px] text-white w-full"
+        className="font-['TacticSans-ThnIt:Italic', sans-serif] h-[250px] md:h-[300px] lg:h-[390px] italic leading-[1.1] md:leading-[1.15] lg:leading-[normal] text-[48px] md:text-[60px] lg:text-[80px] text-white w-full"
         initial={{ 
           x: 600, 
           opacity: 0,

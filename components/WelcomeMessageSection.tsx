@@ -4,6 +4,7 @@ import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import imgFrame2121453199 from "../assets/bbb989e48d9b1decc89776bd7017047b43e65fbd.png";
 import imgSouthend1 from "../assets/ddef11e3b02574ec5550f4f45615c149dbdd9694.png";
+import Image from "next/image";
 
 function Frame2121453200() {
   return (
@@ -49,7 +50,7 @@ export function WelcomeMessageSection() {
           transition={{ duration: 1.5, ease: "easeOut" }}
         >
           <div className="absolute bg-[#1c4e80] inset-0" />
-          <img alt="" className="absolute max-w-none object-50%-50% object-cover opacity-10 size-full" src={imgFrame2121453199} />
+          <Image alt="" className="absolute max-w-none object-50%-50% object-cover opacity-10 size-full" src={imgFrame2121453199} />
         </motion.div>
 
         {/* Large background text watermark */}
@@ -71,7 +72,7 @@ export function WelcomeMessageSection() {
           transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <img alt="Pastor Peace" className="absolute h-[227.12%] left-[-44.76%] max-w-none top-[-33.71%] w-[182.86%]" src={imgSouthend1} />
+            <Image alt="Pastor Peace" className="absolute h-[227.12%] left-[-44.76%] max-w-none top-[-33.71%] w-[182.86%]" src={imgSouthend1} />
           </div>
         </motion.div>
 

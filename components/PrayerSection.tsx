@@ -3,6 +3,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import imgPrayerBackground from "../assets/26bf3427203ab706ca90f0ce691ce6257b9aac31.png";
+import Image from "next/image";
 
 export function PrayerSection() {
   const ref = useRef(null);
@@ -18,7 +19,7 @@ export function PrayerSection() {
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
-          <img 
+          <Image 
             alt="Prayer and Bible Study" 
             className="absolute inset-0 max-w-none object-cover object-center pointer-events-none size-full" 
             src={imgPrayerBackground} 

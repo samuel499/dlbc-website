@@ -4,6 +4,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { CreditCard, Heart } from 'lucide-react';
 import imgFrame2121453208 from "../assets/df48ec78c11550d1289a711543cd8ec8f5d086c7.png";
+import Image from "next/image";
 
 export function DonationSection() {
   const ref = useRef(null);
@@ -60,7 +61,7 @@ export function DonationSection() {
       <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
         <div className="absolute bg-[#1c4e80] inset-0" />
         <div className="absolute inset-0 opacity-20 overflow-hidden">
-          <img 
+          <Image
             alt="" 
             className="absolute h-full md:h-[133.2%] left-0 max-w-none top-0 md:top-[-8.26%] w-full object-cover" 
             src={imgFrame2121453208} 
@@ -148,7 +149,7 @@ export function DonationSection() {
 
         {/* Supporting Text */}
         <motion.p
-          className="font-['TacticSans-RegIt:Italic',_sans-serif] italic text-white text-[14px] md:text-[16px] text-center mt-6 md:mt-8 max-w-[90%] md:max-w-[600px] opacity-90"
+          className="font-['TacticSans-RegIt:Italic', sans-serif] italic text-white text-[14px] md:text-[16px] text-center mt-6 md:mt-8 max-w-[90%] md:max-w-[600px] opacity-90"
           variants={textLineVariants}
           transition={{ delay: 2 }}
         >

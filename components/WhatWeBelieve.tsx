@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import imgWhatWeBelieve from "../assets/48d2f945f60ce906b30eb06020bd38f232a5ca46.png";
+import Image from "next/image";
 
 export function WhatWeBelieve() {
   return (
@@ -66,7 +67,7 @@ export function WhatWeBelieve() {
           >
             {/* Main Image Container */}
             <div className="relative">
-              <img 
+              <Image 
                 src={imgWhatWeBelieve} 
                 alt="Pastor Dr. W.F Kumuyi speaking" 
                 className="w-full h-auto rounded-2xl shadow-2xl"
