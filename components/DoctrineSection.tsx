@@ -115,7 +115,7 @@ function DoctrineCard({
         {icon}
       </motion.div>
       <motion.p 
-        className="font-['TacticSans-MedIt:Italic', sans-serif] italic leading-[normal] text-[#4cafe8] text-[28px] md:text-[36px] mt-[100px] md:mt-0 md:absolute md:left-12 md:top-[calc(50%-42px)] mb-3 md:mb-0"
+        className="font-['TacticSans-MedIt:Italic', sans-serif] italic leading-[normal] text-[#4cafe8] text-[28px] md:text-[36px] mt-24 md:mt-12 md:absolute md:left-12 md:top-[calc(50%-42px)] mb-3 md:mb-0"
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.2 }}
       >
