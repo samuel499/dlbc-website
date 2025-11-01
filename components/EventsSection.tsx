@@ -49,7 +49,7 @@ const events: Event[] = [
 
 function CalendarIcon() {
   return (
-    <svg className="block w-[20px] h-[20px]" fill="none" preserveAspectRatio="none" viewBox="0 0 20 20">
+    <svg className="block w-5 h-5" fill="none" preserveAspectRatio="none" viewBox="0 0 20 20">
       <path d={svgPaths.p3df18800} fill="var(--fill-0, #4CAFE8)" />
     </svg>
   );
@@ -57,7 +57,7 @@ function CalendarIcon() {
 
 function ClockIcon() {
   return (
-    <svg className="block w-[24px] h-[20px]" fill="none" preserveAspectRatio="none" viewBox="0 0 24 20">
+    <svg className="block w-6 h-5" fill="none" preserveAspectRatio="none" viewBox="0 0 24 20">
       <path d={svgPaths.p3def0600} fill="var(--fill-0, #4CAFE8)" />
     </svg>
   );
@@ -84,7 +84,7 @@ function EventCard({ event, index, onSeeMore }: EventCardProps) {
   return (
     <motion.div
       ref={cardRef}
-      className="relative h-[570px] w-full max-w-[1006px] mx-auto mb-[32px]"
+      className="relative h-[570px] w-full max-w-[1006px] mx-auto mb-8"
       initial={{ opacity: 0, y: 60 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
       transition={{ duration: 0.7, delay: index * 0.2, ease: "easeOut" }}
@@ -98,25 +98,25 @@ function EventCard({ event, index, onSeeMore }: EventCardProps) {
 
       {/* Content Card */}
       <motion.div
-        className="absolute bg-white h-auto min-h-[464px] left-[calc(50%+274px)] overflow-visible shadow-[0px_0px_40px_10px_rgba(76,175,232,0.25)] top-[53px] translate-x-[-50%] w-[90%] max-w-[796px] p-[30px] md:p-[48px]"
+        className="absolute bg-white h-auto min-h-[464px] left-[calc(50%+274px)] overflow-visible shadow-[0px_0px_40px_10px_rgba(76,175,232,0.25)] top-[53px] translate-x-[-50%] w-[90%] max-w-[796px] p-[30px] md:p-12"
         whileHover={{ y: -5, boxShadow: "0px 10px 60px 20px rgba(76,175,232,0.35)" }}
         transition={{ duration: 0.3 }}
       >
         {/* Date */}
-        <div className="flex items-center gap-[12px] mb-[20px]">
+        <div className="flex items-center gap-3 mb-5">
           <CalendarIcon />
-          <p className="font-['TacticSans-ThnIt:Italic',_sans-serif] italic text-[#2d2d2d] text-[14px] md:text-[16px]">
+          <p className="font-['TacticSans-ThnIt:Italic', sans-serif] italic text-[#2d2d2d] text-[14px] md:text-4">
             {event.date}
           </p>
         </div>
 
         {/* Title */}
-        <h2 className="font-['TacticSans-MedIt:Italic',_sans-serif] italic text-[#2d2d2d] text-[32px] md:text-[40px] lg:text-[48px] leading-[1.2] mb-[20px] md:mb-[24px]">
+        <h2 className="font-['TacticSans-MedIt:Italic', sans-serif] italic text-[#2d2d2d] text-8 md:text-[40px] lg:text-12 leading-[1.2] mb-5 md:mb-6">
           {event.title}
         </h2>
 
         {/* Description */}
-        <p className="font-['TacticSans-RegIt:Italic',_sans-serif] italic text-[#2d2d2d] text-[18px] md:text-[24px] leading-[1.4] mb-[24px]">
+        <p className="font-['TacticSans-RegIt:Italic', sans-serif] italic text-[#2d2d2d] text-[18px] md:text-6 leading-[1.4] mb-6">
           {event.shortDescription}
           <span 
             className="text-[#5856d6] cursor-pointer hover:underline ml-1"
@@ -127,17 +127,17 @@ function EventCard({ event, index, onSeeMore }: EventCardProps) {
         </p>
 
         {/* Time */}
-        <div className="flex items-center gap-[12px] mb-[16px]">
+        <div className="flex items-center gap-3 mb-4">
           <ClockIcon />
-          <p className="font-['TacticSans-ThnIt:Italic',_sans-serif] italic text-[#2d2d2d] text-[14px] md:text-[16px]">
+          <p className="font-['TacticSans-ThnIt:Italic', sans-serif] italic text-[#2d2d2d] text-[14px] md:text-4">
             {event.time}
           </p>
         </div>
 
         {/* Location */}
-        <div className="flex items-center gap-[12px]">
+        <div className="flex items-center gap-3">
           <LocationIcon />
-          <p className="font-['TacticSans-ThnIt:Italic',_sans-serif] italic text-[#2d2d2d] text-[14px] md:text-[16px] max-w-[250px]">
+          <p className="font-['TacticSans-ThnIt:Italic', sans-serif] italic text-[#2d2d2d] text-[14px] md:text-4 max-w-[250px]">
             {event.location}
           </p>
         </div>
@@ -163,7 +163,7 @@ function EventModal({ event, onClose }: EventModalProps) {
       onClick={onClose}
     >
       <motion.div
-        className="bg-white rounded-[20px] max-w-[900px] w-full max-h-[90vh] overflow-y-auto relative"
+        className="bg-white rounded-5 max-w-[900px] w-full max-h-[90vh] overflow-y-auto relative"
         initial={{ scale: 0.8, y: 50 }}
         animate={{ scale: 1, y: 0 }}
         exit={{ scale: 0.8, y: 50 }}
@@ -172,50 +172,50 @@ function EventModal({ event, onClose }: EventModalProps) {
       >
         {/* Close Button */}
         <button
-          className="absolute right-[20px] top-[20px] z-10 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors"
+          className="absolute right-5 top-5 z-10 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors"
           onClick={onClose}
           aria-label="Close"
         >
-          <X className="w-[24px] h-[24px] text-[#2d2d2d]" />
+          <X className="w-6 h-6 text-[#2d2d2d]" />
         </button>
 
         {/* Event Image */}
-        <div className="w-full h-[300px] md:h-[400px] relative rounded-t-[20px] overflow-hidden">
-          <img alt="" className="w-full h-full object-cover" src={imgFrame2121453211} />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30" />
+        <div className="w-full h-[300px] md:h-[400px] relative rounded-t-5 overflow-hidden">
+          <Image alt="" className="w-full h-full object-cover" src={imgFrame2121453211} />
+          <div className="absolute inset-0 bg-linear-to-b from-transparent to-black/30" />
         </div>
 
         {/* Content */}
-        <div className="p-[30px] md:p-[48px]">
+        <div className="p-[30px] md:p-12">
           {/* Title */}
-          <h2 className="font-['TacticSans-MedIt:Italic',_sans-serif] italic text-[#2d2d2d] text-[36px] md:text-[48px] leading-[1.2] mb-[24px]">
+          <h2 className="font-['TacticSans-MedIt:Italic', sans-serif] italic text-[#2d2d2d] text-[36px] md:text-12 leading-[1.2] mb-6">
             {event.title}
           </h2>
 
           {/* Event Details */}
-          <div className="flex flex-col gap-[16px] mb-[32px]">
-            <div className="flex items-center gap-[12px]">
+          <div className="flex flex-col gap-4 mb-8">
+            <div className="flex items-center gap-3">
               <CalendarIcon />
-              <p className="font-['TacticSans-ThnIt:Italic',_sans-serif] italic text-[#2d2d2d] text-[16px]">
+              <p className="font-['TacticSans-ThnIt:Italic', sans-serif] italic text-[#2d2d2d] text-4">
                 {event.date}
               </p>
             </div>
-            <div className="flex items-center gap-[12px]">
+            <div className="flex items-center gap-3">
               <ClockIcon />
-              <p className="font-['TacticSans-ThnIt:Italic',_sans-serif] italic text-[#2d2d2d] text-[16px]">
+              <p className="font-['TacticSans-ThnIt:Italic', sans-serif] italic text-[#2d2d2d] text-4">
                 {event.time}
               </p>
             </div>
-            <div className="flex items-center gap-[12px]">
+            <div className="flex items-center gap-3">
               <LocationIcon />
-              <p className="font-['TacticSans-ThnIt:Italic',_sans-serif] italic text-[#2d2d2d] text-[16px]">
+              <p className="font-['TacticSans-ThnIt:Italic', sans-serif] italic text-[#2d2d2d] text-4">
                 {event.location}
               </p>
             </div>
           </div>
 
           {/* Full Description */}
-          <p className="font-['TacticSans-RegIt:Italic',_sans-serif] italic text-[#2d2d2d] text-[20px] md:text-[24px] leading-[1.6]">
+          <p className="font-['TacticSans-RegIt:Italic', sans-serif] italic text-[#2d2d2d] text-5 md:text-6 leading-[1.6]">
             {event.fullDescription}
           </p>
         </div>
@@ -248,12 +248,12 @@ export function EventsSection() {
   };
 
   return (
-    <section className="relative bg-white py-[80px] md:py-[120px] -mt-[60px] md:-mt-[80px]">
+    <section className="relative bg-white py-20 md:py-[120px] -mt-[60px] md:-mt-20">
       {/* Blue Bar at Top */}
-      <div className="absolute top-0 left-0 right-0 h-[40px] md:h-[60px] bg-[#4cafe8] z-10" />
+      <div className="absolute top-0 left-0 right-0 h-10 md:h-[60px] bg-[#4cafe8] z-10" />
 
       {/* Content */}
-      <div className="relative z-20 container mx-auto px-4 pt-[80px] md:pt-[100px]">
+      <div className="relative z-20 container mx-auto px-4 pt-20 md:pt-[100px]">
         {/* Event Cards */}
         <AnimatePresence mode="wait">
           <motion.div
@@ -277,7 +277,7 @@ export function EventsSection() {
         {/* Navigation Controls */}
         {totalPages > 1 && (
           <motion.div
-            className="flex items-center justify-center gap-[24px] mt-[40px] mb-[40px]"
+            className="flex items-center justify-center gap-6 mt-10 mb-10"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
@@ -286,25 +286,25 @@ export function EventsSection() {
             <button
               onClick={prevPage}
               disabled={currentPage === 0}
-              className={`flex items-center justify-center w-[48px] h-[48px] rounded-full border-2 transition-all duration-300 ${
+              className={`flex items-center justify-center w-12 h-12 rounded-full border-2 transition-all duration-300 ${
                 currentPage === 0
                   ? 'border-gray-300 text-gray-300 cursor-not-allowed'
                   : 'border-[#4cafe8] text-[#4cafe8] hover:bg-[#4cafe8] hover:text-white'
               }`}
               aria-label="Previous page"
             >
-              <ChevronLeft className="w-[24px] h-[24px]" />
+              <ChevronLeft className="w-6 h-6" />
             </button>
 
             {/* Page Indicators */}
-            <div className="flex gap-[12px]">
+            <div className="flex gap-3">
               {Array.from({ length: totalPages }).map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentPage(index)}
-                  className={`w-[12px] h-[12px] rounded-full transition-all duration-300 ${
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === currentPage
-                      ? 'bg-[#4cafe8] w-[40px]'
+                      ? 'bg-[#4cafe8] w-10'
                       : 'bg-gray-300 hover:bg-gray-400'
                   }`}
                   aria-label={`Go to page ${index + 1}`}
@@ -316,21 +316,21 @@ export function EventsSection() {
             <button
               onClick={nextPage}
               disabled={currentPage === totalPages - 1}
-              className={`flex items-center justify-center w-[48px] h-[48px] rounded-full border-2 transition-all duration-300 ${
+              className={`flex items-center justify-center w-12 h-12 rounded-full border-2 transition-all duration-300 ${
                 currentPage === totalPages - 1
                   ? 'border-gray-300 text-gray-300 cursor-not-allowed'
                   : 'border-[#4cafe8] text-[#4cafe8] hover:bg-[#4cafe8] hover:text-white'
               }`}
               aria-label="Next page"
             >
-              <ChevronRight className="w-[24px] h-[24px]" />
+              <ChevronRight className="w-6 h-6" />
             </button>
           </motion.div>
         )}
 
         {/* Page Counter */}
         {totalPages > 1 && (
-          <p className="text-center font-['Plus_Jakarta_Sans:Regular',_sans-serif] text-[#2d2d2d] text-[16px]">
+          <p className="text-center font-['Plus_Jakarta_Sans:Regular', sans-serif] text-[#2d2d2d] text-4">
             Page {currentPage + 1} of {totalPages}
           </p>
         )}

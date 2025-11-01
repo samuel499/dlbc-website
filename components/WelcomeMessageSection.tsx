@@ -8,8 +8,8 @@ import Image from "next/image";
 
 function Frame2121453200() {
   return (
-    <div className="relative md:absolute bg-[#1c4e80] h-auto md:h-[157px] left-0 md:left-[620px] rounded-[12px] top-0 md:top-[823px] w-full md:w-[820px] p-4 md:p-0">
-      <p className="font-['TacticSans-MedIt:Italic',_sans-serif] italic leading-[1.4] md:leading-[normal] text-[#f1f1f1] text-[18px] md:text-[24px] text-center md:text-left md:absolute md:h-[87px] md:left-[calc(50%-327px)] md:top-[calc(50%-43.5px)] md:w-[654px]">"And they continued stedfastly in the apostles' doctrine and fellowship, and in breaking of bread, and in prayers." — Acts 2:42 (KJV)</p>
+    <div className="relative md:absolute bg-[#1c4e80] h-auto md:h-[157px] left-0 md:left-[620px] rounded-3 top-0 md:top-[823px] w-full md:w-[820px] p-4 md:p-0">
+      <p className="font-['TacticSans-MedIt:Italic', sans-serif] italic leading-[1.4] md:leading-[normal] text-[#f1f1f1] text-[18px] md:text-6 text-center md:text-left md:absolute md:h-[87px] md:left-[calc(50%-327px)] md:top-[calc(50%-43.5px)] md:w-[654px]">"And they continued stedfastly in the apostles' doctrine and fellowship, and in breaking of bread, and in prayers." — Acts 2:42 (KJV)</p>
     </div>
   );
 }
@@ -34,7 +34,7 @@ export function WelcomeMessageSection() {
     <section ref={sectionRef} className="relative w-full h-[800px] md:h-[1000px] overflow-visible">
       <motion.div 
         ref={containerRef}
-        className="relative w-full h-full max-w-[1440px] mx-auto overflow-hidden rounded-t-[16px] md:rounded-t-[24px] shadow-2xl"
+        className="relative w-full h-full max-w-[1440px] mx-auto overflow-hidden rounded-t-2xl md:rounded-t-6 shadow-2xl"
         style={{ 
           y: cardY,
           scale: cardScale,
@@ -55,7 +55,7 @@ export function WelcomeMessageSection() {
 
         {/* Large background text watermark */}
         <motion.p 
-          className="hidden md:block absolute font-['TacticSans-UltIt:Italic',_sans-serif] italic leading-[normal] text-[100px] lg:text-[200px] text-[rgba(255,255,255,0.08)] top-[-50px] md:top-[-109px] left-0 md:left-[calc(50%-100px)] w-full md:w-[1195px] pointer-events-none"
+          className="hidden md:block absolute font-['TacticSans-UltIt:Italic', sans-serif] italic leading-[normal] text-[100px] lg:text-[200px] text-[rgba(255,255,255,0.08)] top-[-50px] md:top-[-109px] left-0 md:left-[calc(50%-100px)] w-full md:w-[1195px] pointer-events-none"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 0.08 } : { opacity: 0 }}
           transition={{ duration: 1.5, delay: 0.3 }}
@@ -65,7 +65,7 @@ export function WelcomeMessageSection() {
 
         {/* Pastor Image - Fixed height */}
         <motion.div 
-          className="hidden md:block absolute h-[600px] lg:h-[849px] right-0 lg:left-[779px] top-[-20px] lg:top-[-26px] w-[600px] lg:w-[791px]" 
+          className="hidden md:block absolute h-[600px] lg:h-[849px] right-0 lg:left-[779px] -top-5 lg:top-[-26px] w-[600px] lg:w-[791px]" 
           data-name="southend 1"
           initial={{ opacity: 0, x: 50 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
@@ -78,7 +78,7 @@ export function WelcomeMessageSection() {
 
         {/* Welcome Message Text */}
         <motion.div 
-          className="relative md:absolute font-['TacticSans-BlkIt:Italic',_sans-serif] italic leading-[1.4] md:leading-[normal] left-0 md:left-[calc(50%-672px)] text-[#f1f1f1] text-[24px] sm:text-[32px] md:text-[40px] lg:text-[48px] top-[40px] md:top-[163px] w-full md:w-[821px] px-4 md:px-0"
+          className="relative md:absolute font-['TacticSans-BlkIt:Italic', sans-serif] italic leading-[1.4] md:leading-[normal] left-0 md:left-[calc(50%-672px)] text-[#f1f1f1] text-6 sm:text-[32px] md:text-[40px] lg:text-[48px] top-10 md:top-[163px] w-full md:w-[821px] px-4 md:px-0"
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
           transition={{ duration: 0.8, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -89,7 +89,7 @@ export function WelcomeMessageSection() {
 
         {/* Scripture Quote Box */}
         <motion.div
-          className="relative md:absolute top-[320px] md:top-auto px-4 md:px-0"
+          className="relative md:absolute top-80 md:top-auto px-4 md:px-0"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
@@ -99,7 +99,7 @@ export function WelcomeMessageSection() {
 
         {/* Pastor Name */}
         <motion.p 
-          className="relative md:absolute font-['TacticSans-MedIt:Italic',_sans-serif] italic leading-[normal] left-0 md:left-[calc(50%-564px)] text-[28px] md:text-[36px] text-white top-[280px] md:top-[774px] w-full md:w-[355px] text-center md:text-left px-4 md:px-0"
+          className="relative md:absolute font-['TacticSans-MedIt:Italic', sans-serif] italic leading-[normal] left-0 md:left-[calc(50%-564px)] text-[28px] md:text-[36px] text-white top-[280px] md:top-[774px] w-full md:w-[355px] text-center md:text-left px-4 md:px-0"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}

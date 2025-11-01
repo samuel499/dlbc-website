@@ -7,13 +7,13 @@ import svgPaths from "../imports/svg-offc5ky6ha";
 function BlueDotAccent() {
   return (
     <motion.div 
-      className="absolute left-[20px] md:left-[48px] top-[80px] md:top-[90px] lg:top-[100px]"
+      className="absolute left-5 md:left-12 top-20 md:top-[90px] lg:top-[100px]"
       initial={{ scale: 0, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: true }}
     >
-      <div className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] rounded-full bg-[#4cafe8]" />
+      <div className="w-10 h-10 md:w-[50px] md:h-[50px] rounded-full bg-[#4cafe8]" />
     </motion.div>
   );
 }
@@ -21,7 +21,7 @@ function BlueDotAccent() {
 function DecorativeShape() {
   return (
     <motion.div 
-      className="absolute left-[140px] md:left-[215px] top-[500px] md:top-[639px] h-[80px] md:h-[100px] w-[240px] md:w-[295px]"
+      className="absolute left-[140px] md:left-[215px] top-[500px] md:top-[639px] h-20 md:h-[100px] w-60 md:w-[295px]"
       initial={{ opacity: 0, x: -30 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, delay: 0.4 }}
@@ -72,7 +72,7 @@ export function UpcomingEventsSection() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
+      transition: { duration: 0.8, ease: [0.0, 0.0, 0.2, 1.0] as const },
     },
   };
 
@@ -89,7 +89,7 @@ export function UpcomingEventsSection() {
 
         {/* Title */}
         <motion.p 
-          className="font-['TacticSans-UltIt:Italic',_sans-serif] italic leading-[normal] text-[#2d2d2d] text-[48px] md:text-[72px] lg:text-[96px] absolute left-[80px] md:left-[calc(50%-605px)] top-[60px] md:top-[80px] w-[calc(100%-100px)] md:w-[956px]"
+          className="font-['TacticSans-UltIt:Italic', sans-serif] italic leading-[normal] text-[#2d2d2d] text-[48px] md:text-[72px] lg:text-[96px] absolute left-20 md:left-[calc(50%-605px)] top-[60px] md:top-20 w-[calc(100%-100px)] md:w-[956px]"
           variants={fadeInUp}
         >
           Upcoming Events
@@ -97,7 +97,7 @@ export function UpcomingEventsSection() {
 
         {/* Description Text */}
         <motion.p 
-          className="font-['TacticSans-RegIt:Italic',_sans-serif] italic leading-[1.4] md:leading-[normal] text-[#2d2d2d] text-[24px] md:text-[36px] lg:text-[48px] absolute left-[20px] md:left-[calc(50%-605px)] top-[200px] md:top-[243px] w-[calc(100%-40px)] md:w-[802px] pr-4 md:pr-0"
+          className="font-['TacticSans-RegIt:Italic', sans-serif] italic leading-[1.4] md:leading-[normal] text-[#2d2d2d] text-6 md:text-[36px] lg:text-[48px] absolute left-5 md:left-[calc(50%-605px)] top-[200px] md:top-[243px] w-[calc(100%-40px)] md:w-[802px] pr-4 md:pr-0"
           variants={fadeInUp}
         >
           Stay connected with our upcoming programs designed to uplift your spirit, deepen your knowledge of God's Word, and prepare you for His coming.

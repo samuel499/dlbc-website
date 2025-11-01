@@ -6,7 +6,7 @@ import svgPaths from "../imports/svg-75nplmhdea";
 
 function Group1() {
   return (
-    <div className="absolute left-[20px] md:left-[48px] top-[20px] md:top-[24px] size-[60px] md:size-[80px]">
+    <div className="absolute left-5 md:left-12 top-5 md:top-6 size-[60px] md:size-20">
       <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 80 80">
         <g id="Group 1">
           <circle cx="40" cy="40" fill="var(--fill-0, #4CAFE8)" id="Ellipse 1" r="40" />
@@ -22,13 +22,13 @@ function Group1() {
 
 function Group2() {
   return (
-    <div className="absolute left-[20px] md:left-[48px] top-[20px] md:top-[24px] size-[60px] md:size-[80px]">
+    <div className="absolute left-5 md:left-12 top-5 md:top-6 size-[60px] md:size-20">
       <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 80 80">
         <g id="Group 1">
           <circle cx="40" cy="40" fill="var(--fill-0, #4CAFE8)" id="Ellipse 1" r="40" />
         </g>
       </svg>
-      <div className="absolute left-[16px] md:left-[22px] top-[12px] md:top-[16px] w-[32px] md:w-[43px] h-[28px] md:h-[38px]">
+      <div className="absolute left-4 md:left-[22px] top-3 md:top-4 w-8 md:w-[43px] h-7 md:h-[38px]">
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 43 38">
           <path d={svgPaths.p3de27f00} fill="var(--fill-0, white)" id="Vector" />
         </svg>
@@ -39,7 +39,7 @@ function Group2() {
 
 function Group3() {
   return (
-    <div className="absolute left-[20px] md:left-[48px] top-[20px] md:top-[24px] size-[60px] md:size-[80px]">
+    <div className="absolute left-5 md:left-12 top-5 md:top-6 size-[60px] md:size-20">
       <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 80 80">
         <g id="Group 1">
           <circle cx="40" cy="40" fill="var(--fill-0, #4CAFE8)" id="Ellipse 1" r="40" />
@@ -52,7 +52,7 @@ function Group3() {
 
 function Group4() {
   return (
-    <div className="absolute left-[20px] md:left-[48px] top-[20px] md:top-[24px] size-[60px] md:size-[80px]">
+    <div className="absolute left-5 md:left-12 top-5 md:top-6 size-[60px] md:size-20">
       <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 80 80">
         <g id="Group 1">
           <circle cx="40" cy="40" fill="var(--fill-0, #4CAFE8)" id="Ellipse 1" r="40" />
@@ -78,7 +78,7 @@ function Group4() {
 
 function Group5() {
   return (
-    <div className="absolute left-[20px] md:left-[48px] top-[20px] md:top-[24px] size-[60px] md:size-[80px]">
+    <div className="absolute left-5 md:left-12 top-5 md:top-6 size-[60px] md:size-20">
       <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 80 80">
         <g id="Group 1">
           <circle cx="40" cy="40" fill="var(--fill-0, #4CAFE8)" id="Ellipse 1" r="40" />
@@ -115,13 +115,13 @@ function DoctrineCard({
         {icon}
       </motion.div>
       <motion.p 
-        className="font-['TacticSans-MedIt:Italic',_sans-serif] italic leading-[normal] text-[#4cafe8] text-[28px] md:text-[36px] mt-[100px] md:mt-0 md:absolute md:left-[48px] md:top-[calc(50%-42px)] mb-3 md:mb-0"
+        className="font-['TacticSans-MedIt:Italic', sans-serif] italic leading-[normal] text-[#4cafe8] text-[28px] md:text-[36px] mt-[100px] md:mt-0 md:absolute md:left-12 md:top-[calc(50%-42px)] mb-3 md:mb-0"
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.2 }}
       >
         {title}
       </motion.p>
-      <p className="font-['TacticSans-RegIt:Italic',_sans-serif] italic leading-[1.4] md:leading-[normal] text-[#2d2d2d] text-[18px] md:text-[24px] md:absolute md:left-[48px] md:right-[48px] md:bottom-[37px]">{description}</p>
+      <p className="font-['TacticSans-RegIt:Italic', sans-serif] italic leading-[1.4] md:leading-[normal] text-[#2d2d2d] text-[18px] md:text-6 md:absolute md:left-12 md:right-12 md:bottom-[37px]">{description}</p>
     </motion.div>
   );
 }
@@ -129,7 +129,7 @@ function DoctrineCard({
 function Frame1116607030() {
   return (
     <motion.div 
-      className="bg-[#4cafe8] box-border content-stretch flex gap-[10px] h-[70px] md:h-[93px] items-center justify-center mx-auto px-[20px] md:px-[26px] py-[10px] md:py-[12px] rounded-[100px] w-full max-w-[300px] md:max-w-[408px] cursor-pointer"
+      className="bg-[#4cafe8] box-border content-stretch flex gap-2.5 h-[70px] md:h-[93px] items-center justify-center mx-auto px-5 md:px-[26px] py-2.5 md:py-3 rounded-[100px] w-full max-w-[300px] md:max-w-[408px] cursor-pointer"
       whileHover={{ 
         scale: 1.05, 
         backgroundColor: "#3ba3d9",
@@ -137,7 +137,7 @@ function Frame1116607030() {
       }}
       whileTap={{ scale: 0.95 }}
     >
-      <p className="font-['Plus_Jakarta_Sans:SemiBold',_sans-serif] font-semibold leading-[normal] relative shrink-0 text-[20px] md:text-[24px] text-nowrap text-white whitespace-pre">Learn More</p>
+      <p className="font-['Plus_Jakarta_Sans:SemiBold', sans-serif] font-semibold leading-[normal] relative shrink-0 text-5 md:text-6 text-nowrap text-white whitespace-pre">Learn More</p>
     </motion.div>
   );
 }
@@ -162,7 +162,7 @@ export function DoctrineSection() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
     },
   };
 
@@ -171,7 +171,7 @@ export function DoctrineSection() {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.8, ease: "easeOut" },
+      transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as const },
     },
   };
 
@@ -186,7 +186,7 @@ export function DoctrineSection() {
       >
         {/* Background title */}
         <motion.p 
-          className="font-['TacticSans-UltIt:Italic',_sans-serif] italic leading-[normal] text-[60px] sm:text-[100px] md:text-[140px] lg:text-[200px] text-[rgba(45,45,45,0.08)] text-center md:text-left mb-12 md:mb-0 md:absolute md:left-0 md:top-0 w-full pointer-events-none"
+          className="font-['TacticSans-UltIt:Italic', sans-serif] italic leading-[normal] text-[60px] sm:text-[100px] md:text-[140px] lg:text-[200px] text-[rgba(45,45,45,0.08)] text-center md:text-left mb-12 md:mb-0 md:absolute md:left-0 md:top-0 w-full pointer-events-none"
           variants={titleVariants}
         >
           Doctrine

@@ -10,16 +10,16 @@ import Image from "next/image";
 
 function Frame2121453193() {
   return (
-    <div className="h-[180px] md:h-[242.388px] relative rounded-[20px] md:rounded-[30px] shadow-[0px_0px_40px_10px_rgba(76,175,232,0.25)] w-[130px] md:w-[177.751px]">
-      <Image alt="Church community gathering" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[20px] md:rounded-[30px] size-full" src={imgFrame2121453193} />
+    <div className="h-[180px] md:h-[242.388px] relative rounded-5 md:rounded-[30px] shadow-[0px_0px_40px_10px_rgba(76,175,232,0.25)] w-[130px] md:w-[177.751px]">
+      <Image alt="Church community gathering" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-5 md:rounded-[30px] size-full" src={imgFrame2121453193} />
     </div>
   );
 }
 
 function Frame2121453194() {
   return (
-    <div className="h-[165px] md:h-[223.617px] relative rounded-[20px] md:rounded-[30px] shadow-[0px_0px_40px_10px_rgba(76,175,232,0.25)] w-[130px] md:w-[177.69px]">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[20px] md:rounded-[30px]">
+    <div className="h-[165px] md:h-[223.617px] relative rounded-5 md:rounded-[30px] shadow-[0px_0px_40px_10px_rgba(76,175,232,0.25)] w-[130px] md:w-[177.69px]">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-5 md:rounded-[30px]">
         <Image alt="Church service" className="absolute h-[108.36%] left-[-40.7%] max-w-none top-[-7.99%] w-[181.82%]" src={imgFrame2121453194} />
       </div>
     </div>
@@ -28,8 +28,8 @@ function Frame2121453194() {
 
 function Frame2121453196() {
   return (
-    <div className="h-[165px] md:h-[223.617px] relative rounded-[20px] md:rounded-[30px] shadow-[0px_0px_40px_10px_rgba(76,175,232,0.25),0px_4px_4px_0px_rgba(0,0,0,0.25)] w-[130px] md:w-[177.69px]">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[20px] md:rounded-[30px]">
+    <div className="h-[165px] md:h-[223.617px] relative rounded-5 md:rounded-[30px] shadow-[0px_0px_40px_10px_rgba(76,175,232,0.25),0px_4px_4px_0px_rgba(0,0,0,0.25)] w-[130px] md:w-[177.69px]">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-5 md:rounded-[30px]">
         <Image alt="Church worship" className="absolute h-[108.36%] left-[-40.7%] max-w-none top-[-7.99%] w-[181.82%]" src={imgFrame2121453194} />
       </div>
     </div>
@@ -38,14 +38,14 @@ function Frame2121453196() {
 
 function Frame2121453195() {
   return (
-    <div className="h-[105px] md:h-[140.731px] relative rounded-[20px] md:rounded-[30px] shadow-[0px_0px_40px_10px_rgba(76,175,232,0.25)] w-[165px] md:w-[222.206px]">
-      <Image alt="Church members" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-[20px] md:rounded-[30px] size-full" src={imgFrame2121453195} />
+    <div className="h-[105px] md:h-[140.731px] relative rounded-5 md:rounded-[30px] shadow-[0px_0px_40px_10px_rgba(76,175,232,0.25)] w-[165px] md:w-[222.206px]">
+      <Image alt="Church members" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none rounded-5 md:rounded-[30px] size-full" src={imgFrame2121453195} />
     </div>
   );
 }
 
 function After() {
-  return <div className="absolute bg-[#27abc9] h-10 left-0 right-0 rounded-[20px] top-0" data-name="::after" />;
+  return <div className="absolute bg-[#27abc9] h-10 left-0 right-0 rounded-5 top-0" data-name="::after" />;
 }
 
 function TiAngleUp() {
@@ -63,7 +63,7 @@ function LinkBackToTop() {
 
   return (
     <div 
-      className="bg-[#197084] relative rounded-[20px] size-full cursor-pointer hover:bg-[#1a7d94] transition-colors" 
+      className="bg-[#197084] relative rounded-5 size-full cursor-pointer hover:bg-[#1a7d94] transition-colors" 
       data-name="Link back-to-top"
       onClick={scrollToTop}
     >
@@ -93,7 +93,7 @@ export function AboutSection() {
       transition: { 
         duration: 1.2,
         delay: custom.delay,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
         scale: {
           type: "spring",
           damping: 10,
@@ -108,7 +108,7 @@ export function AboutSection() {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 1, ease: "easeOut" },
+      transition: { duration: 1, ease: [0.42, 0, 0.58, 1] as [number, number, number, number] },
     },
   };
 
@@ -117,7 +117,7 @@ export function AboutSection() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 1.2, ease: "easeOut" },
+      transition: { duration: 1.2, ease: [0.42, 0, 0.58, 1] as [number, number, number, number] },
     },
   };
 
@@ -144,7 +144,7 @@ export function AboutSection() {
             animate={isInView ? "visible" : "hidden"}
             custom={{ finalX: 0, finalY: 0, delay: 0.4 }}
           >
-            <div className="flex-none rotate-[10deg]">
+            <div className="flex-none rotate-10">
               <Frame2121453196 />
             </div>
           </motion.div>
@@ -176,7 +176,7 @@ export function AboutSection() {
         <div className="hidden md:block absolute left-8 top-0 w-[450px] h-[600px]">
           {/* Photo 1 - Top left of "D" */}
           <motion.div 
-            className="absolute left-[20px] top-[20px]" 
+            className="absolute left-5 top-5" 
             variants={imagePopUpVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
@@ -189,7 +189,7 @@ export function AboutSection() {
 
           {/* Photo 2 - Middle left of "D" */}
           <motion.div 
-            className="absolute left-[10px] top-[180px]" 
+            className="absolute left-2.5 top-[180px]" 
             variants={imagePopUpVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
@@ -208,7 +208,7 @@ export function AboutSection() {
             animate={isInView ? "visible" : "hidden"}
             custom={{ finalX: 0, finalY: 0, delay: 0.6 }}
           >
-            <div className="flex-none rotate-[-6deg]">
+            <div className="flex-none -rotate-6">
               <Frame2121453193 />
             </div>
           </motion.div>
@@ -221,7 +221,7 @@ export function AboutSection() {
             animate={isInView ? "visible" : "hidden"}
             custom={{ finalX: 0, finalY: 0, delay: 0.5 }}
           >
-            <div className="flex-none rotate-[10deg]">
+            <div className="flex-none rotate-10">
               <Frame2121453196 />
             </div>
           </motion.div>
@@ -252,7 +252,7 @@ export function AboutSection() {
             transition={{ delay: 1 }}
           >
             <motion.div 
-              className="relative w-5 h-5 md:w-6 md:h-6 flex-shrink-0 cursor-pointer group"
+              className="relative w-5 h-5 md:w-6 md:h-6 shrink-0 cursor-pointer group"
               initial={{ scale: 0 }}
               animate={isInView ? { scale: 1 } : { scale: 0 }}
               transition={{ 
@@ -281,7 +281,7 @@ export function AboutSection() {
               />
             </motion.div>
             
-            <h2 className="font-['TacticSans-UltIt:Italic',_sans-serif] italic text-[#2d2d2d] text-[48px] md:text-[60px] lg:text-[80px] leading-none whitespace-nowrap">
+            <h2 className="font-['TacticSans-UltIt:Italic', sans-serif] italic text-[#2d2d2d] text-[48px] md:text-[60px] lg:text-[80px] leading-none whitespace-nowrap">
               About us
             </h2>
           </motion.div>
@@ -294,7 +294,7 @@ export function AboutSection() {
             animate={isInView ? "visible" : "hidden"}
             transition={{ delay: 1.4 }}
           >
-            <p className="font-['TacticSans-RegIt:Italic',_sans-serif] italic text-[#2d2d2d] text-[20px] md:text-[28px] lg:text-[36px] leading-[1.4] max-w-full md:max-w-[700px]">
+            <p className="font-['TacticSans-RegIt:Italic', sans-serif] italic text-[#2d2d2d] text-5 md:text-[28px] lg:text-[36px] leading-[1.4] max-w-full md:max-w-[700px]">
               We're a Bible-rooted, prayerful community committed to discipleship, worship and local outreach. Our ministry has grown through committed Bible teaching and practical service to families and communities.
             </p>
           </motion.div>
@@ -306,8 +306,8 @@ export function AboutSection() {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }}
             transition={{ duration: 1, ease: "easeOut", delay: 1.8 }}
           >
-            <div className="h-[60px] md:h-[80px] w-[200px] md:w-[260px]">
-              <div className="h-[60px] md:h-[80px] relative w-[200px] md:w-[260px]">
+            <div className="h-[60px] md:h-20 w-[200px] md:w-[260px]">
+              <div className="h-[60px] md:h-20 relative w-[200px] md:w-[260px]">
                 <div className="absolute inset-[-20%_-10.75%_-60%_-13.56%]">
                   <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 367 180">
                     <g filter="url(#filter0_d_47_160)" id="Rectangle 7">
@@ -333,12 +333,12 @@ export function AboutSection() {
 
           {/* Back to Top Button */}
           <motion.div 
-            className="hidden md:block absolute right-0 bottom-[-40px]"
+            className="hidden md:block absolute right-0 -bottom-10"
             initial={{ opacity: 0, scale: 0 }}
             animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
             transition={{ duration: 0.8, type: "spring", bounce: 0.4, delay: 2.2 }}
           >
-            <div className="h-[40px] w-[42.181px]">
+            <div className="h-10 w-[42.181px]">
               <LinkBackToTop />
             </div>
           </motion.div>

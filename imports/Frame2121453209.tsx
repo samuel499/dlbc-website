@@ -7,7 +7,7 @@ function After() {
 function TiAngleUp() {
   return (
     <div className="absolute h-[10px] left-[calc(50%-0.09px)] top-[13.33px] translate-x-[-50%] w-[8.993px]" data-name="ti-angle-up">
-      <p className="absolute font-['Inter:Regular',_sans-serif] font-normal leading-[9px] left-[4.5px] not-italic text-[9px] text-center text-white top-0 translate-x-[-50%] w-[8.993px]"></p>
+      <p className="absolute font-['Inter:Regular', sans-serif] font-normal leading-[9px] left-[4.5px] not-italic text-[9px] text-center text-white top-0 translate-x-[-50%] w-[8.993px]"></p>
     </div>
   );
 }
@@ -24,9 +24,9 @@ function LinkBackToTop() {
 export default function Frame2121453209() {
   return (
     <div className="bg-[#fdfdfd] relative size-full">
-      <p className="absolute font-['TacticSans-UltIt:Italic',_sans-serif] h-[115px] italic leading-[normal] left-[calc(50%-605px)] text-[#2d2d2d] text-[96px] top-[80px] w-[956px]">Upcoming Events</p>
+      <p className="absolute font-['TacticSans-UltIt:Italic', sans-serif] h-[115px] italic leading-[normal] left-[calc(50%-605px)] text-[#2d2d2d] text-[96px] top-[80px] w-[956px]">Upcoming Events</p>
       <LinkBackToTop />
-      <p className="absolute font-['TacticSans-RegIt:Italic',_sans-serif] h-[348px] italic leading-[normal] left-[calc(50%-605px)] text-[#2d2d2d] text-[48px] top-[243px] w-[802px]">Stay connected with our upcoming programs designed to uplift your spirit, deepen your knowledge of God’s Word, and prepare you for His coming.</p>
+      <p className="absolute font-['TacticSans-RegIt:Italic', sans-serif] h-[348px] italic leading-[normal] left-[calc(50%-605px)] text-[#2d2d2d] text-[48px] top-[243px] w-[802px]">Stay connected with our upcoming programs designed to uplift your spirit, deepen your knowledge of God’s Word, and prepare you for His coming.</p>
       <div className="absolute h-[100px] left-[215px] top-[639px] w-[295px]">
         <div className="absolute inset-[-20%_-10.75%_-60%_-13.56%]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 367 180">

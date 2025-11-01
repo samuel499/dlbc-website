@@ -33,7 +33,7 @@ export function ScriptureSection() {
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 md:px-8">
         {/* Main Scripture Quote */}
         <motion.p 
-          className="font-['TacticSans-BldIt:Italic',_sans-serif] italic leading-[1.4] text-[18px] md:text-[20px] lg:text-[24px] text-center text-white max-w-[90%] md:max-w-[800px] mb-6 md:mb-8"
+          className="font-['TacticSans-BldIt:Italic', sans-serif] italic leading-[1.4] text-[18px] md:text-[20px] lg:text-6 text-center text-white max-w-[90%] md:max-w-[800px] mb-6 md:mb-8"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -43,7 +43,7 @@ export function ScriptureSection() {
 
         {/* Scripture Reference */}
         <motion.p 
-          className="font-['TacticSans-BldIt:Italic',_sans-serif] italic leading-[normal] text-[16px] md:text-[18px] lg:text-[20px] text-center text-white"
+          className="font-['TacticSans-BldIt:Italic', sans-serif] italic leading-[normal] text-4 md:text-[18px] lg:text-[20px] text-center text-white"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8, delay: 0.5 }}
