@@ -89,7 +89,7 @@ function ServiceCard({
         
         {/* Time Circle */}
         <motion.div 
-          className="relative h-[160px] md:h-[180px] w-[160px] md:w-[180px] mx-auto md:ml-auto md:mr-0"
+          className="relative h-40 md:h-[180px] w-40 md:w-[180px] mx-auto md:ml-auto md:mr-0"
           animate={isHovered ? { scale: 1.1, rotate: 5 } : { scale: 1, rotate: 0 }}
           transition={{ duration: 0.4, type: "spring", stiffness: 300 }}
         >
