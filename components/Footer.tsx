@@ -42,7 +42,7 @@ export function Footer({
   ];
 
   const defaultNetworks: NetworkLocation[] = networkLocations || [
-    { name: 'dclm.org', url: 'https://dclm.org' },
+    { name: 'gckhq.org', url: 'https://gckhq.org' },
     { name: 'dclm-uk.org', url: 'https://dclm-uk.org' },
     { name: 'dclm.org', url: 'https://dclm.org' },
   ];
@@ -99,7 +99,7 @@ export function Footer({
             <div className="flex flex-col gap-4">
               {phone && (
                 <a
-                  href={`tel:${phone}`}
+                  href={`${phone}`}
                   className="flex items-center gap-3 text-white/80 hover:text-[#4cafe8] transition-colors duration-300"
                 >
                   <div className="bg-white/10 p-2 rounded-full">

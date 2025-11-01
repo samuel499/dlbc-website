@@ -137,7 +137,7 @@ function Frame1116607030() {
       }}
       whileTap={{ scale: 0.95 }}
     >
-      <p className="font-['Plus_Jakarta_Sans:SemiBold', sans-serif] font-semibold leading-[normal] relative shrink-0 text-5 md:text-6 text-nowrap text-white whitespace-pre">Learn More</p>
+      <a href="https://dclm-uk.org/about/what-we-believe/" className="font-['Plus_Jakarta_Sans:SemiBold', sans-serif] font-semibold leading-[normal] relative shrink-0 text-5 md:text-6 text-nowrap text-white whitespace-pre">Learn More</a>
     </motion.div>
   );
 }
@@ -254,6 +254,7 @@ export function DoctrineSection() {
         <motion.div 
           className="mt-12 md:mt-16"
           variants={itemVariants}
+          onClick={() => window.open("https://dclm-uk.org/about/what-we-believe/")}
         >
           <Frame1116607030 />
         </motion.div>

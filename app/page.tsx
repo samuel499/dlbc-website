@@ -10,8 +10,17 @@ import imgGallery1 from "../assets/bbb989e48d9b1decc89776bd7017047b43e65fbd.png"
 import imgGallery2 from "../assets/9e910c2cd3241d00a70a6e70808946855fa74d16.png";
 import imgGallery3 from "../assets/ab5b177bac98f4160531363f92b969c748fb3991.png";
 import imgGallery4 from "../assets/d6d87d449b601242cf48ff584d9fa7432836c574.png";
-import imgGallery5 from "../assets/ddef11e3b02574ec5550f4f45615c149dbdd9694.png";
 import imgGallery6 from "../assets/df48ec78c11550d1289a711543cd8ec8f5d086c7.png";
+import imgGallery7 from "../assets/gallery1.jpg";
+import imgGallery8 from "../assets/gallery2.jpg";
+import imgGallery9 from "../assets/gallery3.jpg";
+import imgGallery10 from "../assets/gallery4.jpg";
+import imgGallery12 from "../assets/gallery6.jpg";
+import imgGallery13 from "../assets/gallery7.jpg";
+import imgGallery14 from "../assets/gallery8.jpg";
+import imgGallery15 from "../assets/gallery9.jpg";
+import imgGallery16 from "../assets/gallery10.jpg";
+import imgGallery17 from "../assets/gallery11.jpg";
 import { AnimatedText } from "../components/AnimatedText";
 import { InteractiveMap } from "../components/InteractiveMap";
 import { WhatWeBelieveSection } from "../components/WhatWeBelieveSection";
@@ -361,8 +370,20 @@ export default function App() {
               { src: imgGallery2.src, alt: "Church service" },
               { src: imgGallery3.src, alt: "Community event" },
               { src: imgGallery4.src, alt: "Worship service" },
-              { src: imgGallery5.src, alt: "Bible study" },
+              // { src: imgGallery5.src, alt: "Bible study" },
               { src: imgGallery6.src, alt: "Fellowship time" },
+              { src: imgGallery7.src, alt: "Fellowship time" },
+              { src: imgGallery8.src, alt: "Fellowship time" },
+              { src: imgGallery9.src, alt: "Fellowship time" },
+              { src: imgGallery10.src, alt: "Fellowship time" },
+              // { src: imgGallery11.src, alt: "Fellowship time" },
+              { src: imgGallery12.src, alt: "Fellowship time" },
+              { src: imgGallery13.src, alt: "Fellowship time" },
+              { src: imgGallery14.src, alt: "Fellowship time" },
+              { src: imgGallery15.src, alt: "Fellowship time" },
+              { src: imgGallery16.src, alt: "Fellowship time" },
+              { src: imgGallery17.src, alt: "Fellowship time" },
+              // { src: imgGallery18.src, alt: "Fellowship time" },
             ]}
             title="Moments of Fellowship,"
             subtitle="Memories of Faith"
@@ -383,16 +404,19 @@ export default function App() {
         <Footer
           logoSrc={imgDlbc1.src}
           description="We take the Bible as the final authority in all matters concerning Christian life and practice."
-          phone="+44 123 456 7890"
-          email="contact@dlbcsouthend.org"
+          phone="https://wa.me/447570283305"
+          email="dlbcsouthend@gmail.com"
           quickLinks={[
             { label: "Home", href: "#home" },
             { label: "What We Believe", href: "#what-we-believe" },
             { label: "About", href: "#about" },
+            { label: "Gallery", href: "#gallery" },
+            { label: "Contact", href: "#contact" },
+            { label: "Worship", href: "#worship" },
             { label: "Events", href: "#events" },
           ]}
           networkLocations={[
-            { name: "dclm.org", url: "https://dclm.org" },
+            { name: "gckhq.org", url: "https://gckhq.org" },
             { name: "dclm-uk.org", url: "https://dclm-uk.org" },
             { name: "dclm.org", url: "https://dclm.org" },
           ]}
