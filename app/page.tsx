@@ -6,6 +6,12 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import imgFrame4 from "../assets/809ee5c3463ae88314b8d0c99e963f2cd4c475af.png";
 import imgDlbc1 from "../assets/73abb69066aa35b5a918fdf33372492b361bf848.png";
+import imgGallery1 from "../assets/bbb989e48d9b1decc89776bd7017047b43e65fbd.png";
+import imgGallery2 from "../assets/9e910c2cd3241d00a70a6e70808946855fa74d16.png";
+import imgGallery3 from "../assets/ab5b177bac98f4160531363f92b969c748fb3991.png";
+import imgGallery4 from "../assets/d6d87d449b601242cf48ff584d9fa7432836c574.png";
+import imgGallery5 from "../assets/ddef11e3b02574ec5550f4f45615c149dbdd9694.png";
+import imgGallery6 from "../assets/df48ec78c11550d1289a711543cd8ec8f5d086c7.png";
 import { AnimatedText } from "../components/AnimatedText";
 import { InteractiveMap } from "../components/InteractiveMap";
 import { WhatWeBelieveSection } from "../components/WhatWeBelieveSection";
@@ -16,7 +22,7 @@ import { PrayerSection } from "../components/PrayerSection";
 import { WelcomeMessageSection } from "../components/WelcomeMessageSection";
 import { WorshipWithUsSection } from "../components/WorshipWithUsSection";
 import { ScriptureBanner } from "../components/ScriptureBanner";
-// import { GalleryCarousel } from "../components/GalleryCarousel";
+import { GalleryCarousel } from "../components/GalleryCarousel";
 import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
 import { DonationSection } from "../components/DonationSection";
@@ -349,15 +355,18 @@ export default function App() {
 
         {/* Gallery Section */}
         <section id="gallery">
-          {/* <GalleryCarousel
+          <GalleryCarousel
             images={[
-              { src: imgFrame4.src, alt: "Church gathering" },
-              { src: imgDlbc1.src, alt: "Church service" },
-              { src: imgFrame4.src, alt: "Community event" },
-              { src: imgDlbc1.src, alt: "Worship service" },
+              { src: imgGallery1.src, alt: "Church gathering" },
+              { src: imgGallery2.src, alt: "Church service" },
+              { src: imgGallery3.src, alt: "Community event" },
+              { src: imgGallery4.src, alt: "Worship service" },
+              { src: imgGallery5.src, alt: "Bible study" },
+              { src: imgGallery6.src, alt: "Fellowship time" },
             ]}
-            title="Moments of Fellowship, Memories of Faith"
-          /> */}
+            title="Moments of Fellowship,"
+            subtitle="Memories of Faith"
+          />
         </section>
 
         {/* Contact Section */}
