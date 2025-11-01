@@ -10,8 +10,17 @@ import imgGallery1 from "../assets/bbb989e48d9b1decc89776bd7017047b43e65fbd.png"
 import imgGallery2 from "../assets/9e910c2cd3241d00a70a6e70808946855fa74d16.png";
 import imgGallery3 from "../assets/ab5b177bac98f4160531363f92b969c748fb3991.png";
 import imgGallery4 from "../assets/d6d87d449b601242cf48ff584d9fa7432836c574.png";
-import imgGallery5 from "../assets/ddef11e3b02574ec5550f4f45615c149dbdd9694.png";
 import imgGallery6 from "../assets/df48ec78c11550d1289a711543cd8ec8f5d086c7.png";
+import imgGallery7 from "../assets/gallery1.jpg";
+import imgGallery8 from "../assets/gallery2.jpg";
+import imgGallery9 from "../assets/gallery3.jpg";
+import imgGallery10 from "../assets/gallery4.jpg";
+import imgGallery12 from "../assets/gallery6.jpg";
+import imgGallery13 from "../assets/gallery7.jpg";
+import imgGallery14 from "../assets/gallery8.jpg";
+import imgGallery15 from "../assets/gallery9.jpg";
+import imgGallery16 from "../assets/gallery10.jpg";
+import imgGallery17 from "../assets/gallery11.jpg";
 import { AnimatedText } from "../components/AnimatedText";
 import { InteractiveMap } from "../components/InteractiveMap";
 import { WhatWeBelieveSection } from "../components/WhatWeBelieveSection";
@@ -209,28 +218,22 @@ function Frame4() {
   );
 }
 
+
 function Frame2() {
   return (
-    <div className="bg-[#1c4e80] h-20 md:h-[100px] lg:h-[143.534px] overflow-clip relative w-40 md:w-[200px] lg:w-[307.178px]">
-      <div
-        className="absolute flex h-[calc(1px*((var(--transform-inner-width)*0.7666651606559753)+(var(--transform-inner-height)*0.6420471668243408)))] items-center justify-center left-[30px] md:left-10 lg:left-[55.24px] top-[calc(50%+14px)] md:top-[calc(50%+16px)] lg:top-[calc(50%+18.969px)] translate-y-[-50%] w-[calc(1px*((var(--transform-inner-height)*0.7666651606559753)+(var(--transform-inner-width)*0.6420471668243408)))]"
-        style={
-          {
-            "--transform-inner-width": "57",
-            "--transform-inner-height": "46",
-          } as React.CSSProperties
-        }
-      >
-        <div className="flex-none rotate-[50.055deg]">
+    <div className="bg-[#1c4e80] h-20 md:h-[100px] lg:h-[143.534px] overflow-visible relative w-40 md:w-[200px] lg:w-[307.178px]">
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+        <div className="rotate-[50.055deg]">
           <div
-            className="h-9 md:h-[42px] lg:h-[46px] relative w-11 md:w-[52px] lg:w-[57px]"
+            className="h-12 md:h-[42px] lg:h-[46px] relative w-14 md:w-[52px] lg:w-[57px]"
             data-name="dlbc 1"
           >
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="relative overflow-hidden pointer-events-none w-full h-full">
               <Image
                 alt="Deeper Life Bible Church Logo"
-                className="absolute h-[111.38%] left-0 max-w-none top-[-0.26%] w-full"
+                className="object-contain w-full h-full"
                 src={imgDlbc1}
+                priority
               />
             </div>
           </div>
@@ -268,18 +271,9 @@ function ScrollingText() {
         </motion.div>
       </div>
 
-      <div
-        className="absolute flex h-[calc(1px*((var(--transform-inner-width)*0.7666651606559753)+(var(--transform-inner-height)*0.6420471668243408)))] items-center justify-center left-[-50px] lg:left-[-78.6px] top-[-100px] md:left-[-120px] lg:top-[-193.86px] w-[calc(1px*((var(--transform-inner-height)*0.7666651606559753)+(var(--transform-inner-width)*0.6420471668243408)))]"
-        style={
-          {
-            "--transform-inner-width": "307.171875",
-            "--transform-inner-height": "143.53125",
-          } as React.CSSProperties
-        }
-      >
-        <div className="flex-none rotate-[309.945deg]">
-          <Frame2 />
-        </div>
+      {/* Simplified logo positioning for mobile */}
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 rotate-[309.945deg] origin-center">
+        <Frame2 />
       </div>
     </div>
   );
@@ -361,8 +355,20 @@ export default function App() {
               { src: imgGallery2.src, alt: "Church service" },
               { src: imgGallery3.src, alt: "Community event" },
               { src: imgGallery4.src, alt: "Worship service" },
-              { src: imgGallery5.src, alt: "Bible study" },
+              // { src: imgGallery5.src, alt: "Bible study" },
               { src: imgGallery6.src, alt: "Fellowship time" },
+              { src: imgGallery7.src, alt: "Fellowship time" },
+              { src: imgGallery8.src, alt: "Fellowship time" },
+              { src: imgGallery9.src, alt: "Fellowship time" },
+              { src: imgGallery10.src, alt: "Fellowship time" },
+              // { src: imgGallery11.src, alt: "Fellowship time" },
+              { src: imgGallery12.src, alt: "Fellowship time" },
+              { src: imgGallery13.src, alt: "Fellowship time" },
+              { src: imgGallery14.src, alt: "Fellowship time" },
+              { src: imgGallery15.src, alt: "Fellowship time" },
+              { src: imgGallery16.src, alt: "Fellowship time" },
+              { src: imgGallery17.src, alt: "Fellowship time" },
+              // { src: imgGallery18.src, alt: "Fellowship time" },
             ]}
             title="Moments of Fellowship,"
             subtitle="Memories of Faith"
@@ -383,16 +389,19 @@ export default function App() {
         <Footer
           logoSrc={imgDlbc1.src}
           description="We take the Bible as the final authority in all matters concerning Christian life and practice."
-          phone="+44 123 456 7890"
-          email="contact@dlbcsouthend.org"
+          phone="https://wa.me/447570283305"
+          email="dlbcsouthend@gmail.com"
           quickLinks={[
             { label: "Home", href: "#home" },
             { label: "What We Believe", href: "#what-we-believe" },
             { label: "About", href: "#about" },
+            { label: "Gallery", href: "#gallery" },
+            { label: "Contact", href: "#contact" },
+            { label: "Worship", href: "#worship" },
             { label: "Events", href: "#events" },
           ]}
           networkLocations={[
-            { name: "dclm.org", url: "https://dclm.org" },
+            { name: "gckhq.org", url: "https://gckhq.org" },
             { name: "dclm-uk.org", url: "https://dclm-uk.org" },
             { name: "dclm.org", url: "https://dclm.org" },
           ]}
