@@ -16,7 +16,7 @@ import { PrayerSection } from "../components/PrayerSection";
 import { WelcomeMessageSection } from "../components/WelcomeMessageSection";
 import { WorshipWithUsSection } from "../components/WorshipWithUsSection";
 import { ScriptureBanner } from "../components/ScriptureBanner";
-import { GalleryCarousel } from "../components/GalleryCarousel";
+// import { GalleryCarousel } from "../components/GalleryCarousel";
 import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
 import { DonationSection } from "../components/DonationSection";
@@ -349,7 +349,7 @@ export default function App() {
 
         {/* Gallery Section */}
         <section id="gallery">
-          <GalleryCarousel
+          {/* <GalleryCarousel
             images={[
               { src: imgFrame4.src, alt: "Church gathering" },
               { src: imgDlbc1.src, alt: "Church service" },
@@ -357,40 +357,36 @@ export default function App() {
               { src: imgDlbc1.src, alt: "Worship service" },
             ]}
             title="Moments of Fellowship, Memories of Faith"
-          />
+          /> */}
         </section>
-        
+
         {/* Contact Section */}
         <section id="contact">
           <ContactSection
             backgroundImage={imgFrame4.src}
             cardImage={imgDlbc1.src}
-            contactInfo={{
-              email: "contact@dlbcsouthend.org",
-              phone: "+44 123 456 7890",
-              address:
-                "St Peter's Community Hall, Eastbourne Grove, Westcliff-on-Sea, SS0 0QF",
-            }}
+            cardQuote="Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God."
+            cardReference="Philippians 4:6 (KJV)"
           />
         </section>
 
         {/* Footer */}
         <Footer
+          logoSrc={imgDlbc1.src}
+          description="We take the Bible as the final authority in all matters concerning Christian life and practice."
+          phone="+44 123 456 7890"
+          email="contact@dlbcsouthend.org"
           quickLinks={[
             { label: "Home", href: "#home" },
             { label: "What We Believe", href: "#what-we-believe" },
             { label: "About", href: "#about" },
-            { label: "Worship", href: "#worship" },
-            { label: "Gallery", href: "#gallery" },
             { label: "Events", href: "#events" },
-            { label: "Contact", href: "#contact" },
           ]}
-          socialLinks={{
-            facebook: "https://facebook.com/dlbcsouthend",
-            instagram: "https://instagram.com/dlbcsouthend",
-            youtube: "https://youtube.com/@dlbcsouthend",
-            email: "mailto:contact@dlbcsouthend.org",
-          }}
+          networkLocations={[
+            { name: "dclm.org", url: "https://dclm.org" },
+            { name: "dclm-uk.org", url: "https://dclm-uk.org" },
+            { name: "dclm.org", url: "https://dclm.org" },
+          ]}
         />
       </div>
 

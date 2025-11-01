@@ -3,20 +3,21 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import Image from 'next/image';
-import { Mail, Phone, MapPin } from 'lucide-react';
 import { ContactForm } from './ContactForm';
 
 interface ContactSectionProps {
   backgroundImage: string;
   cardImage: string;
-  contactInfo: {
-    email: string;
-    phone: string;
-    address: string;
-  };
+  cardQuote: string;
+  cardReference: string;
 }
 
-export function ContactSection({ backgroundImage, cardImage, contactInfo }: ContactSectionProps) {
+export function ContactSection({ 
+  backgroundImage, 
+  cardImage, 
+  cardQuote,
+  cardReference 
+}: ContactSectionProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -77,7 +78,7 @@ export function ContactSection({ backgroundImage, cardImage, contactInfo }: Cont
             <ContactForm />
           </motion.div>
 
-          {/* Contact Info Card with Background Image */}
+          {/* Quote Card with Background Image */}
           <motion.div
             className="relative overflow-hidden rounded-2xl shadow-2xl min-h-[400px] lg:min-h-full"
             initial={{ opacity: 0, x: 60 }}
@@ -88,65 +89,32 @@ export function ContactSection({ backgroundImage, cardImage, contactInfo }: Cont
             <div className="absolute inset-0">
               <Image
                 src={cardImage}
-                alt="Church building"
+                alt="Scripture background"
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1c4e80]/95 via-[#1c4e80]/70 to-[#1c4e80]/50" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1c4e80]/95 via-[#1c4e80]/80 to-[#1c4e80]/60" />
             </div>
 
-            {/* Card Content */}
-            <div className="relative z-10 h-full flex flex-col justify-end p-6 md:p-8 lg:p-10">
-              <h3 className="font-['TacticSans-UltIt:Italic', sans-serif] italic text-white text-3xl md:text-4xl mb-8">
-                Visit Us
-              </h3>
-              
-              <ContactInfoItem
-                icon={<MapPin className="w-6 h-6" />}
-                label="Address"
-                value={contactInfo.address}
-              />
-              
-              <ContactInfoItem
-                icon={<Phone className="w-6 h-6" />}
-                label="Phone"
-                value={contactInfo.phone}
-              />
-              
-              <ContactInfoItem
-                icon={<Mail className="w-6 h-6" />}
-                label="Email"
-                value={contactInfo.email}
-              />
+            {/* Card Content - Bible Quote */}
+            <div className="relative z-10 h-full flex flex-col justify-center items-center p-6 md:p-8 lg:p-12">
+              <motion.div
+                className="text-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >
+                <p className="font-['TacticSans-UltIt:Italic', sans-serif] italic text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-relaxed mb-6">
+                  &ldquo;{cardQuote}&rdquo;
+                </p>
+                <p className="font-['TacticSans-Bld', sans-serif] text-[#4cafe8] text-lg md:text-xl lg:text-2xl">
+                  {cardReference}
+                </p>
+              </motion.div>
             </div>
           </motion.div>
         </div>
       </div>
     </section>
-  );
-}
-
-// Contact Info Item Component
-interface ContactInfoItemProps {
-  icon: React.ReactNode;
-  label: string;
-  value: string;
-}
-
-function ContactInfoItem({ icon, label, value }: ContactInfoItemProps) {
-  return (
-    <div className="flex items-start gap-4 mb-6 last:mb-0">
-      <div className="flex-shrink-0 bg-[#4cafe8] text-white p-3 rounded-lg">
-        {icon}
-      </div>
-      <div>
-        <p className="font-['TacticSans-MedIt:Italic', sans-serif] text-[#4cafe8] text-sm mb-1">
-          {label}
-        </p>
-        <p className="font-['TacticSans-RegIt:Italic', sans-serif] text-white text-base md:text-lg">
-          {value}
-        </p>
-      </div>
-    </div>
   );
 }

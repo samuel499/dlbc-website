@@ -1,60 +1,129 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Facebook, Instagram, Youtube, Mail } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
+import Image from 'next/image';
 
 interface FooterLink {
   label: string;
   href: string;
 }
 
-interface FooterProps {
-  quickLinks?: FooterLink[];
-  socialLinks?: {
-    facebook?: string;
-    instagram?: string;
-    youtube?: string;
-    email?: string;
-  };
+interface NetworkLocation {
+  name: string;
+  url: string;
 }
 
-export function Footer({ quickLinks, socialLinks }: FooterProps) {
+interface FooterProps {
+  logoSrc?: string;
+  description?: string;
+  phone?: string;
+  email?: string;
+  quickLinks?: FooterLink[];
+  networkLocations?: NetworkLocation[];
+}
+
+
+export function Footer({ 
+  logoSrc,
+  description = "We take the Bible as the final authority in all matters concerning Christian life and practice.",
+  phone,
+  email,
+  quickLinks,
+  networkLocations 
+}: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   const defaultQuickLinks: FooterLink[] = quickLinks || [
-    { label: 'About Us', href: '#about' },
+    { label: 'Home', href: '#home' },
+    { label: 'What We Believe', href: '#beliefs' },
+    { label: 'About', href: '#about' },
     { label: 'Events', href: '#events' },
-    { label: 'Gallery', href: '#gallery' },
-    { label: 'Contact', href: '#contact' },
+  ];
+
+  const defaultNetworks: NetworkLocation[] = networkLocations || [
+    { name: 'dclm.org', url: 'https://dclm.org' },
+    { name: 'dclm-uk.org', url: 'https://dclm-uk.org' },
+    { name: 'dclm.org', url: 'https://dclm.org' },
   ];
 
   return (
     <footer className="relative w-full bg-gradient-to-br from-[#1c4e80] via-[#2d5f8d] to-[#1c4e80] text-white overflow-hidden">
       
-      {/* Decorative Background Elements */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-[#4cafe8] rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#4cafe8] rounded-full blur-3xl" />
+      {/* Large "Southend" Text Background */}
+      <div className="absolute bottom-0 left-0 right-0 overflow-hidden pointer-events-none">
+        <motion.h2 
+          className="font-['TacticSans-UltIt:Italic', sans-serif] italic text-white/5 text-[150px] sm:text-[200px] md:text-[280px] lg:text-[350px] leading-none whitespace-nowrap translate-y-[20%]"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 0.05 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+        >
+          Southend
+        </motion.h2>
       </div>
+
+      {/* Deeper Life Logo - Bottom Left */}
+      {logoSrc && (
+        <div className="absolute bottom-8 left-8 z-10 hidden md:block">
+          <Image
+            src={logoSrc}
+            alt="Deeper Life Logo"
+            width={80}
+            height={80}
+            className="opacity-20"
+          />
+        </div>
+      )}
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-16">
         
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12">
           
-          {/* Church Info */}
+          {/* Church Info with Logo and Contact Icons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="font-['TacticSans-UltIt:Italic', sans-serif] italic text-3xl md:text-4xl text-[#4cafe8] mb-4">
-              DLBC Southend
+            <h3 className="font-['TacticSans-UltIt:Italic', sans-serif] italic text-3xl md:text-4xl text-white mb-4">
+              Deeper Life Bible Church, Southend
             </h3>
-            <p className="font-['TacticSans-RegIt:Italic', sans-serif] italic text-white/80 text-sm md:text-base leading-relaxed">
-              Deeper Life Bible Church - A community of faith, fellowship, and spiritual growth.
+            <p className="font-['TacticSans-RegIt:Italic', sans-serif] italic text-white/80 text-sm md:text-base leading-relaxed mb-6">
+              {description}
             </p>
+
+            {/* Contact Icons */}
+            <div className="flex flex-col gap-4">
+              {phone && (
+                <a
+                  href={`tel:${phone}`}
+                  className="flex items-center gap-3 text-white/80 hover:text-[#4cafe8] transition-colors duration-300"
+                >
+                  <div className="bg-white/10 p-2 rounded-full">
+                    <Phone className="w-5 h-5" />
+                  </div>
+                  <span className="font-['TacticSans-RegIt:Italic', sans-serif] text-sm md:text-base">
+                    {phone}
+                  </span>
+                </a>
+              )}
+              {email && (
+                <a
+                  href={`mailto:${email}`}
+                  className="flex items-center gap-3 text-white/80 hover:text-[#4cafe8] transition-colors duration-300"
+                >
+                  <div className="bg-white/10 p-2 rounded-full">
+                    <Mail className="w-5 h-5" />
+                  </div>
+                  <span className="font-['TacticSans-RegIt:Italic', sans-serif] text-sm md:text-base">
+                    {email}
+                  </span>
+                </a>
+              )}
+            </div>
           </motion.div>
 
           {/* Quick Links */}
@@ -64,15 +133,15 @@ export function Footer({ quickLinks, socialLinks }: FooterProps) {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h4 className="font-['TacticSans-MedIt:Italic', sans-serif] italic text-xl md:text-2xl mb-4">
+            <h4 className="font-['TacticSans-MedIt:Italic', sans-serif] italic text-xl md:text-2xl mb-6 text-white">
               Quick Links
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               {defaultQuickLinks.map((link, index) => (
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="font-['TacticSans-RegIt:Italic', sans-serif] text-white/70 hover:text-[#4cafe8] transition-colors duration-300 text-sm md:text-base"
+                    className="font-['TacticSans-RegIt:Italic', sans-serif] text-white/70 hover:text-[#4cafe8] transition-colors duration-300 text-sm md:text-base block"
                   >
                     {link.label}
                   </a>
@@ -81,83 +150,47 @@ export function Footer({ quickLinks, socialLinks }: FooterProps) {
             </ul>
           </motion.div>
 
-          {/* Social Links */}
+          {/* Our Networks */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h4 className="font-['TacticSans-MedIt:Italic', sans-serif] italic text-xl md:text-2xl mb-4">
-              Connect With Us
+            <h4 className="font-['TacticSans-MedIt:Italic', sans-serif] italic text-xl md:text-2xl mb-6 text-white">
+              Our Networks
             </h4>
-            <div className="flex gap-4">
-              <SocialIcon
-                href={socialLinks?.facebook || '#'}
-                icon={<Facebook className="w-5 h-5" />}
-                label="Facebook"
-              />
-              <SocialIcon
-                href={socialLinks?.instagram || '#'}
-                icon={<Instagram className="w-5 h-5" />}
-                label="Instagram"
-              />
-              <SocialIcon
-                href={socialLinks?.youtube || '#'}
-                icon={<Youtube className="w-5 h-5" />}
-                label="YouTube"
-              />
-              <SocialIcon
-                href={socialLinks?.email || '#'}
-                icon={<Mail className="w-5 h-5" />}
-                label="Email"
-              />
-            </div>
+            <ul className="space-y-3">
+              {defaultNetworks.map((network, index) => (
+                <li key={index}>
+                  <a
+                    href={network.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-['TacticSans-RegIt:Italic', sans-serif] text-white/70 hover:text-[#4cafe8] transition-colors duration-300 text-sm md:text-base block"
+                  >
+                    {network.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </motion.div>
         </div>
 
-        {/* Divider */}
-        <div className="border-t border-white/20 mb-8" />
-
-        {/* Bottom Footer */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="font-['TacticSans-RegIt:Italic', sans-serif] italic text-white/60 text-sm text-center md:text-left">
-            © {currentYear} Deeper Life Bible Church. All rights reserved.
+        {/* Bottom Copyright */}
+        <motion.div
+          className="border-t border-white/10 pt-8 text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <p className="font-['TacticSans-RegIt:Italic', sans-serif] text-white/60 text-sm">
+            © {currentYear} dlbcsouthend. All Rights Reserved.
           </p>
-          
-          {/* Southend Text */}
-          <motion.p
-            className="font-['TacticSans-UltIt:Italic', sans-serif] italic text-[#4cafe8] text-2xl md:text-3xl"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.3 }}
-          >
-            Southend
-          </motion.p>
-        </div>
+        </motion.div>
       </div>
     </footer>
   );
 }
-
-// Social Icon Component
-interface SocialIconProps {
-  href: string;
-  icon: React.ReactNode;
-  label: string;
-}
-
-function SocialIcon({ href, icon, label }: SocialIconProps) {
-  return (
-    <motion.a
-      href={href}
-      aria-label={label}
-      className="bg-white/10 hover:bg-[#4cafe8] text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm border border-white/20"
-      whileHover={{ scale: 1.1, rotate: 5 }}
-      whileTap={{ scale: 0.95 }}
-    >
-      {icon}
-    </motion.a>
-  );
-}
+  
