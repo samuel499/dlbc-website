@@ -84,64 +84,73 @@ function EventCard({ event, index, onSeeMore }: EventCardProps) {
   return (
     <motion.div
       ref={cardRef}
-      className="relative h-[570px] w-full max-w-[1006px] mx-auto mb-8"
+      className="relative w-full max-w-[1006px] mx-auto mb-8 px-4 md:px-0"
       initial={{ opacity: 0, y: 60 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
       transition={{ duration: 0.7, delay: index * 0.2, ease: "easeOut" }}
     >
-      {/* Background Image */}
-      <div className="absolute h-[570px] left-[calc(50%-169px)] top-0 translate-x-[-50%] w-[1006px]">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <Image alt="" className="absolute h-[182.05%] left-[0.38%] max-w-none top-[0.85%] w-full object-cover" src={imgFrame2121453211} />
+      {/* Container for Image and Card */}
+      <div className="relative flex flex-col md:flex-row items-stretch md:items-center gap-4 md:gap-0">
+        
+        {/* Background Image */}
+        <div className="relative w-full md:w-[400px] lg:w-[450px] h-[250px] md:h-[400px] lg:h-[500px] flex-shrink-0 rounded-2xl overflow-hidden md:rounded-none">
+          <Image 
+            alt={event.title} 
+            className="object-cover w-full h-full" 
+            src={imgFrame2121453211} 
+            fill
+          />
         </div>
+
+        {/* Content Card */}
+        <motion.div
+          className="relative bg-white w-full md:w-auto md:flex-1 md:-ml-20 shadow-[0px_0px_40px_10px_rgba(76,175,232,0.25)] rounded-2xl p-6 md:p-8 lg:p-12 z-10"
+          whileHover={{ y: -5, boxShadow: "0px 10px 60px 20px rgba(76,175,232,0.35)" }}
+          transition={{ duration: 0.3 }}
+        >
+          {/* Date */}
+          <div className="flex items-center gap-3 mb-4">
+            <CalendarIcon />
+            <p className="font-['TacticSans-ThnIt:Italic', sans-serif] italic text-[#2d2d2d] text-sm md:text-base">
+              {event.date}
+            </p>
+          </div>
+
+          {/* Title */}
+          <h2 className="font-['TacticSans-MedIt:Italic', sans-serif] italic text-[#2d2d2d] text-2xl md:text-3xl lg:text-4xl leading-[1.2] mb-4 md:mb-5">
+            {event.title}
+          </h2>
+
+          {/* Description */}
+          <p className="font-['TacticSans-RegIt:Italic', sans-serif] italic text-[#2d2d2d] text-base md:text-lg leading-[1.4] mb-5">
+            {event.shortDescription}
+            <span 
+              className="text-[#5856d6] cursor-pointer hover:underline ml-1 font-medium"
+              onClick={onSeeMore}
+            >
+              see more
+            </span>
+          </p>
+
+          {/* Time */}
+          <div className="flex items-center gap-3 mb-4">
+            <ClockIcon />
+            <p className="font-['TacticSans-ThnIt:Italic', sans-serif] italic text-[#2d2d2d] text-sm md:text-base">
+              {event.time}
+            </p>
+          </div>
+
+          {/* Location */}
+          <div className="flex items-start gap-3">
+            <div className="flex-shrink-0 mt-1">
+              <LocationIcon />
+            </div>
+            <p className="font-['TacticSans-ThnIt:Italic', sans-serif] italic text-[#2d2d2d] text-sm md:text-base">
+              {event.location}
+            </p>
+          </div>
+        </motion.div>
       </div>
-
-      {/* Content Card */}
-      <motion.div
-        className="absolute bg-white h-auto min-h-[464px] left-[calc(50%+274px)] overflow-visible shadow-[0px_0px_40px_10px_rgba(76,175,232,0.25)] top-[53px] translate-x-[-50%] w-[90%] max-w-[796px] p-[30px] md:p-12"
-        whileHover={{ y: -5, boxShadow: "0px 10px 60px 20px rgba(76,175,232,0.35)" }}
-        transition={{ duration: 0.3 }}
-      >
-        {/* Date */}
-        <div className="flex items-center gap-3 mb-5">
-          <CalendarIcon />
-          <p className="font-['TacticSans-ThnIt:Italic', sans-serif] italic text-[#2d2d2d] text-[14px] md:text-4">
-            {event.date}
-          </p>
-        </div>
-
-        {/* Title */}
-        <h2 className="font-['TacticSans-MedIt:Italic', sans-serif] italic text-[#2d2d2d] text-8 md:text-[40px] lg:text-12 leading-[1.2] mb-5 md:mb-6">
-          {event.title}
-        </h2>
-
-        {/* Description */}
-        <p className="font-['TacticSans-RegIt:Italic', sans-serif] italic text-[#2d2d2d] text-[18px] md:text-6 leading-[1.4] mb-6">
-          {event.shortDescription}
-          <span 
-            className="text-[#5856d6] cursor-pointer hover:underline ml-1"
-            onClick={onSeeMore}
-          >
-            see more
-          </span>
-        </p>
-
-        {/* Time */}
-        <div className="flex items-center gap-3 mb-4">
-          <ClockIcon />
-          <p className="font-['TacticSans-ThnIt:Italic', sans-serif] italic text-[#2d2d2d] text-[14px] md:text-4">
-            {event.time}
-          </p>
-        </div>
-
-        {/* Location */}
-        <div className="flex items-center gap-3">
-          <LocationIcon />
-          <p className="font-['TacticSans-ThnIt:Italic', sans-serif] italic text-[#2d2d2d] text-[14px] md:text-4 max-w-[250px]">
-            {event.location}
-          </p>
-        </div>
-      </motion.div>
     </motion.div>
   );
 }
