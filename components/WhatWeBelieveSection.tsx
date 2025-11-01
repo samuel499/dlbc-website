@@ -26,7 +26,7 @@ export function WhatWeBelieveSection() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: { duration: 0.6, ease: [0.4, 0, 0.2, 1] as const },
     },
   };
 
@@ -35,7 +35,7 @@ export function WhatWeBelieveSection() {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.7, ease: "easeOut" },
+      transition: { duration: 0.7, ease: [0.4, 0, 0.2, 1] as const },
     },
   };
 
@@ -44,7 +44,7 @@ export function WhatWeBelieveSection() {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.7, ease: "easeOut" },
+      transition: { duration: 0.7, ease: [0.4, 0, 0.2, 1] as const },
     },
   };
 
@@ -81,7 +81,7 @@ export function WhatWeBelieveSection() {
 
           {/* Title - Mobile */}
           <motion.h2 
-            className="font-['TacticSans-UltIt:Italic',_sans-serif] italic text-[#2d2d2d] text-[42px] sm:text-[60px] leading-[1.1] mb-6 text-center"
+            className="font-['TacticSans-UltIt:Italic', sans-serif] italic text-[#2d2d2d] text-[42px] sm:text-[60px] leading-[1.1] mb-6 text-center"
             variants={fadeInUp}
           >
             What We Believe"
@@ -89,7 +89,7 @@ export function WhatWeBelieveSection() {
 
           {/* Subtext - Mobile */}
           <motion.p 
-            className="font-['TacticSans-RegIt:Italic',_sans-serif] italic text-[#2d2d2d] text-[18px] sm:text-[20px] leading-[1.4] text-center mb-8"
+            className="font-['TacticSans-RegIt:Italic', sans-serif] italic text-[#2d2d2d] text-[18px] sm:text-[20px] leading-[1.4] text-center mb-8"
             variants={fadeInUp}
           >
             We take the Bible as the final authority in all matters concerning Christian life and practice. Learn about the core doctrines that guide our teaching and worship.
@@ -113,8 +113,8 @@ export function WhatWeBelieveSection() {
 
               {/* Name Badge */}
               <div className="absolute bottom-0 left-0 right-0 bg-[#e3eff6] h-[90px] rounded-lg flex flex-col items-center justify-center px-4">
-                <p className="font-['TacticSans-MedIt:Italic',_sans-serif] italic text-[22px] text-[#2d2d2d] text-center mb-1">PASTOR DR W.F KUMUYI</p>
-                <p className="font-['TacticSans-RegIt:Italic',_sans-serif] italic text-[15px] text-[#2d2d2d] text-center">General Superintendent, Deeper Life Bible Church</p>
+                <p className="font-['TacticSans-MedIt:Italic', sans-serif] italic text-[22px] text-[#2d2d2d] text-center mb-1">PASTOR DR W.F KUMUYI</p>
+                <p className="font-['TacticSans-RegIt:Italic', sans-serif] italic text-[15px] text-[#2d2d2d] text-center">General Superintendent, Deeper Life Bible Church</p>
               </div>
             </div>
           </motion.div>
@@ -124,10 +124,10 @@ export function WhatWeBelieveSection() {
             className="space-y-4 text-center mb-8"
             variants={slideInFromRight}
           >
-            <p className="font-['TacticSans-MedIt:Italic',_sans-serif] italic text-[#2d2d2d] text-[24px] sm:text-[28px] leading-[1.3]">
+            <p className="font-['TacticSans-MedIt:Italic', sans-serif] italic text-[#2d2d2d] text-6 sm:text-[28px] leading-[1.3]">
               "All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness: That the man of God may be perfect, throughly furnished unto all good works."
             </p>
-            <p className="font-['TacticSans-MedIt:Italic',_sans-serif] italic text-[#1c4e80] text-[20px]">
+            <p className="font-['TacticSans-MedIt:Italic', sans-serif] italic text-[#1c4e80] text-[20px]">
               2 Timothy 3:16–17 (KJV)
             </p>
           </motion.div>
@@ -137,7 +137,7 @@ export function WhatWeBelieveSection() {
         <div className="hidden lg:block">
           {/* "What We Believe" Title - Right side */}
           <motion.p 
-            className="absolute font-['TacticSans-UltIt:Italic',_sans-serif] h-[226px] italic leading-[normal] left-[calc(50%+162px)] text-[#2d2d2d] text-[96px] top-[80px] w-[510px]"
+            className="absolute font-['TacticSans-UltIt:Italic', sans-serif] h-[226px] italic leading-[normal] left-[calc(50%+162px)] text-[#2d2d2d] text-[96px] top-20 w-[510px]"
             variants={slideInFromRight}
           >
             What We Believe"
@@ -145,7 +145,7 @@ export function WhatWeBelieveSection() {
 
           {/* Subtext - Left side, above pastor image */}
           <motion.p 
-            className="absolute font-['TacticSans-RegIt:Italic',_sans-serif] h-[116px] italic leading-[normal] left-[calc(50%-450px)] text-[#2d2d2d] text-[22px] text-center top-[330px] translate-x-[-50%] w-[650px]"
+            className="absolute font-['TacticSans-RegIt:Italic', sans-serif] h-[116px] italic leading-[normal] left-[calc(50%-450px)] text-[#2d2d2d] text-[22px] text-center top-[330px] translate-x-[-50%] w-[650px]"
             variants={fadeInUp}
           >
             We take the Bible as the final authority in all matters concerning Christian life and practice. Learn about the core doctrines that guide our teaching and worship.
@@ -169,14 +169,14 @@ export function WhatWeBelieveSection() {
             {/* Name Badge */}
             <div className="absolute bg-[#e3eff6] h-[118px] left-[100px] top-[850px] w-[600px]" />
             <div className="absolute h-[71px] italic leading-[normal] left-[120px] text-[#2d2d2d] top-[874px] w-[560px]">
-              <p className="absolute font-['TacticSans-RegIt:Italic',_sans-serif] h-[21px] left-[calc(50%-280px)] text-[20px] top-[50px] w-[560px]">General Superintendent, Deeper Life Bible Church</p>
-              <p className="absolute font-['TacticSans-MedIt:Italic',_sans-serif] h-[42px] left-[calc(50%-280px)] text-[36px] top-0 w-[560px]">PASTOR DR W.F KUMUYI</p>
+              <p className="absolute font-['TacticSans-RegIt:Italic', sans-serif] h-[21px] left-[calc(50%-280px)] text-[20px] top-[50px] w-[560px]">General Superintendent, Deeper Life Bible Church</p>
+              <p className="absolute font-['TacticSans-MedIt:Italic', sans-serif] h-[42px] left-[calc(50%-280px)] text-[36px] top-0 w-[560px]">PASTOR DR W.F KUMUYI</p>
             </div>
           </motion.div>
 
           {/* Scripture Quote - Right side */}
           <motion.p 
-            className="absolute font-['TacticSans-MedIt:Italic',_sans-serif] h-[464px] italic leading-[normal] right-[60px] text-[#2d2d2d] text-[48px] text-right top-[494px] w-[620px]"
+            className="absolute font-['TacticSans-MedIt:Italic', sans-serif] h-[464px] italic leading-[normal] right-[60px] text-[#2d2d2d] text-[48px] text-right top-[494px] w-[620px]"
             variants={slideInFromRight}
           >
             "All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness:
@@ -186,7 +186,7 @@ export function WhatWeBelieveSection() {
 
           {/* Scripture Reference - Right side, below quote */}
           <motion.p 
-            className="absolute font-['TacticSans-MedIt:Italic',_sans-serif] h-[42px] italic leading-[normal] right-[60px] text-[#1c4e80] text-[36px] text-right top-[982px] w-[466px]"
+            className="absolute font-['TacticSans-MedIt:Italic', sans-serif] h-[42px] italic leading-[normal] right-[60px] text-[#1c4e80] text-[36px] text-right top-[982px] w-[466px]"
             variants={fadeInUp}
           >
             2 Timothy 3:16–17 (KJV)
@@ -200,7 +200,7 @@ export function WhatWeBelieveSection() {
               visible: { 
                 opacity: 1, 
                 scale: 1,
-                transition: { duration: 0.5, ease: "easeOut" }
+                transition: { duration: 0.5, ease: [0.4, 0, 0.2, 1] }
               }
             }}
           >

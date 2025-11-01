@@ -33,7 +33,7 @@ export function DonationSection() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const },
     },
   };
 
@@ -46,7 +46,7 @@ export function DonationSection() {
       transition: { 
         duration: 0.8, 
         delay: 1.5,
-        type: "spring",
+        type: "spring" as const,
         bounce: 0.4
       },
     },
@@ -78,7 +78,7 @@ export function DonationSection() {
       >
         {/* Donation Information */}
         <motion.div 
-          className="font-['TacticSans-UltIt:Italic',_sans-serif] italic leading-[1.5] md:leading-[normal] text-[20px] sm:text-[28px] md:text-[32px] lg:text-[36px] text-center text-white max-w-[90%] md:max-w-[802px] mb-8 md:mb-12"
+          className="font-['TacticSans-UltIt:Italic', sans-serif] italic leading-normal md:leading-[normal] text-[20px] sm:text-[28px] md:text-[32px] lg:text-[36px] text-center text-white max-w-[90%] md:max-w-[802px] mb-8 md:mb-12"
           variants={containerVariants}
         >
           <motion.p className="mb-4 md:mb-6" variants={textLineVariants}>
@@ -110,7 +110,7 @@ export function DonationSection() {
         >
           <button
             onClick={handleDonateClick}
-            className="group relative bg-[#4cafe8] hover:bg-[#3ba3d9] text-white font-['Plus_Jakarta_Sans:SemiBold',_sans-serif] font-semibold px-8 md:px-12 py-4 md:py-5 rounded-full text-[18px] md:text-[22px] lg:text-[24px] shadow-[0px_8px_24px_rgba(76,175,232,0.4)] hover:shadow-[0px_12px_32px_rgba(76,175,232,0.6)] transition-all duration-300 flex items-center gap-3 md:gap-4"
+            className="group relative bg-[#4cafe8] hover:bg-[#3ba3d9] text-white font-['Plus_Jakarta_Sans:SemiBold', sans-serif] font-semibold px-8 md:px-12 py-4 md:py-5 rounded-full text-[18px] md:text-[22px] lg:text-6 shadow-[0px_8px_24px_rgba(76,175,232,0.4)] hover:shadow-[0px_12px_32px_rgba(76,175,232,0.6)] transition-all duration-300 flex items-center gap-3 md:gap-4"
           >
             {/* Animated Heart Icon */}
             <motion.div
@@ -133,7 +133,7 @@ export function DonationSection() {
 
             {/* Shine Effect */}
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20 rounded-full"
+              className="absolute inset-0 bg-linear-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20 rounded-full"
               animate={{
                 x: [-200, 200],
               }}
@@ -149,7 +149,7 @@ export function DonationSection() {
 
         {/* Supporting Text */}
         <motion.p
-          className="font-['TacticSans-RegIt:Italic', sans-serif] italic text-white text-[14px] md:text-[16px] text-center mt-6 md:mt-8 max-w-[90%] md:max-w-[600px] opacity-90"
+          className="font-['TacticSans-RegIt:Italic', sans-serif] italic text-white text-[14px] md:text-4 text-center mt-6 md:mt-8 max-w-[90%] md:max-w-[600px] opacity-90"
           variants={textLineVariants}
           transition={{ delay: 2 }}
         >

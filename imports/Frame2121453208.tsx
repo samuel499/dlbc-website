@@ -9,7 +9,7 @@ export default function Frame2121453208() {
           <img alt="" className="absolute h-[133.2%] left-0 max-w-none top-[-8.26%] w-full" src={imgFrame2121453208} />
         </div>
       </div>
-      <div className="absolute font-['TacticSans-UltIt:Italic',_sans-serif] h-[437px] italic leading-[normal] left-1/2 text-[36px] text-center text-white top-[calc(50%-218.5px)] translate-x-[-50%] w-[802px]">
+      <div className="absolute font-['TacticSans-UltIt:Italic', sans-serif] h-[437px] italic leading-[normal] left-1/2 text-[36px] text-center text-white top-[calc(50%-218.5px)] translate-x-[-50%] w-[802px]">
         <p className="mb-0">ONLINE DONATIONS</p>
         <p className="mb-0">&nbsp;</p>
         <p className="mb-0">ACCOUNT NAME: DEEPER CHRISTIAN LIFE MINISTRY</p>

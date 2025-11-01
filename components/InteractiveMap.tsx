@@ -17,7 +17,7 @@ export function InteractiveMap() {
 
   return (
     <motion.div 
-      className="absolute right-4 md:right-[48px] bottom-[20px] md:bottom-auto md:top-[505px] lg:top-[605px] w-[140px] md:w-[180px] lg:w-[200px] h-[105px] md:h-[135px] lg:h-[150px] cursor-pointer z-20"
+      className="absolute right-4 md:right-12 bottom-5 md:bottom-auto md:top-[505px] lg:top-[605px] w-[140px] md:w-[180px] lg:w-[200px] h-[105px] md:h-[135px] lg:h-[150px] cursor-pointer z-20"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       onClick={handleMapClick}

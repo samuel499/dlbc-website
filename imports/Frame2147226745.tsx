@@ -19,7 +19,7 @@ function Group2() {
           <path d={svgPaths.p3df18800} fill="var(--fill-0, #4CAFE8)" id="Vector" />
         </svg>
       </div>
-      <p className="absolute font-['TacticSans-ThnIt:Italic',_sans-serif] h-[18px] italic leading-[normal] left-[calc(50%-318px)] text-[#2d2d2d] text-[16px] top-[43px] w-[121px]">Oct 04, 2025</p>
+      <p className="absolute font-['TacticSans-ThnIt:Italic', sans-serif] h-[18px] italic leading-[normal] left-[calc(50%-318px)] text-[#2d2d2d] text-4 top-[43px] w-[121px]">Oct 04, 2025</p>
     </div>
   );
 }
@@ -27,7 +27,7 @@ function Group2() {
 function Group3() {
   return (
     <div className="absolute contents left-[225px] top-[42px]">
-      <p className="absolute font-['TacticSans-ThnIt:Italic',_sans-serif] h-[18px] italic leading-[normal] left-[calc(50%-137px)] text-[#2d2d2d] text-[16px] top-[43px] w-[92px]">12:00 PM</p>
+      <p className="absolute font-['TacticSans-ThnIt:Italic', sans-serif] h-[18px] italic leading-[normal] left-[calc(50%-137px)] text-[#2d2d2d] text-4 top-[43px] w-[92px]">12:00 PM</p>
       <div className="absolute inset-[9.05%_68.72%_86.64%_28.27%]" data-name="Vector">
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 24 20">
           <path d={svgPaths.p3def0600} fill="var(--fill-0, #4CAFE8)" id="Vector" />
@@ -40,7 +40,7 @@ function Group3() {
 function Group4() {
   return (
     <div className="absolute contents left-[383px] top-[33px]">
-      <div className="absolute font-['TacticSans-ThnIt:Italic',_sans-serif] h-[37px] italic leading-[normal] left-[calc(50%+15px)] text-[#2d2d2d] text-[16px] top-[33px] w-[217px]">
+      <div className="absolute font-['TacticSans-ThnIt:Italic', sans-serif] h-[37px] italic leading-[normal] left-[calc(50%+15px)] text-[#2d2d2d] text-4 top-[33px] w-[217px]">
         <p className="mb-0">{` Kingswood Play Centre, Basildon SS16 5AD`}</p>
         <p>&nbsp;</p>
       </div>
@@ -76,7 +76,7 @@ function VuesaxLinearArrowRight() {
 
 function VuesaxLinearArrowRight1() {
   return (
-    <div className="relative size-[24px]" data-name="vuesax/linear/arrow-right">
+    <div className="relative size-6" data-name="vuesax/linear/arrow-right">
       <VuesaxLinearArrowRight />
     </div>
   );
@@ -84,9 +84,9 @@ function VuesaxLinearArrowRight1() {
 
 function Frame1116607030() {
   return (
-    <div className="absolute box-border content-stretch flex gap-[10px] h-[48px] items-center justify-center left-[539px] px-[26px] py-[12px] rounded-[100px] top-[375px]">
+    <div className="absolute box-border content-stretch flex gap-[10px] h-[48px] items-center justify-center left-[539px] px-[26px] py-3 rounded-[100px] top-[375px]">
       <div aria-hidden="true" className="absolute border-[#4cafe8] border-[3px] border-solid inset-0 pointer-events-none rounded-[100px]" />
-      <p className="font-['Plus_Jakarta_Sans:SemiBold',_sans-serif] font-semibold leading-[normal] relative shrink-0 text-[#2d2d2d] text-[18px] text-nowrap whitespace-pre">{`Join  Live`}</p>
+      <p className="font-['Plus_Jakarta_Sans:SemiBold', sans-serif] font-semibold leading-[normal] relative shrink-0 text-[#2d2d2d] text-[18px] text-nowrap whitespace-pre">{`Join  Live`}</p>
       <div className="flex h-[calc(1px*((var(--transform-inner-width)*0.6451825499534607)+(var(--transform-inner-height)*0.7640284895896912)))] items-center justify-center relative shrink-0 w-[calc(1px*((var(--transform-inner-height)*0.6451825499534607)+(var(--transform-inner-width)*0.7640284895896912)))]" style={{ "--transform-inner-width": "24", "--transform-inner-height": "24" } as React.CSSProperties}>
         <div className="flex-none rotate-[319.821deg]">
           <VuesaxLinearArrowRight1 />
@@ -100,8 +100,8 @@ function Frame2121453210() {
   return (
     <div className="absolute bg-white h-[464px] left-[calc(50%+274px)] overflow-clip shadow-[0px_0px_40px_10px_rgba(76,175,232,0.25)] top-[53px] translate-x-[-50%] w-[796px]">
       <Group2 />
-      <p className="absolute font-['TacticSans-MedIt:Italic',_sans-serif] h-[104px] italic leading-[normal] left-[calc(50%-350px)] text-[#2d2d2d] text-[48px] top-[86px] w-[669px]">Suffolk Region Couples Conference 2025</p>
-      <p className="absolute font-['TacticSans-RegIt:Italic',_sans-serif] h-[151px] italic leading-[normal] left-[calc(50%-350px)] text-[#2d2d2d] text-[24px] top-[214px] w-[633px]">
+      <p className="absolute font-['TacticSans-MedIt:Italic', sans-serif] h-[104px] italic leading-[normal] left-[calc(50%-350px)] text-[#2d2d2d] text-[48px] top-[86px] w-[669px]">Suffolk Region Couples Conference 2025</p>
+      <p className="absolute font-['TacticSans-RegIt:Italic', sans-serif] h-[151px] italic leading-[normal] left-[calc(50%-350px)] text-[#2d2d2d] text-6 top-[214px] w-[633px]">
         Love is God’s gift, and when anchored in Him, it flourishes beautifully. This October, join us for the Suffolk Region Couples Conference 2025 — a refreshing gathering designed to strengthen marriages, inspire hope ......<span className="text-[#5856d6]">see more</span>
       </p>
       <Group3 />
@@ -138,7 +138,7 @@ function Group8() {
           <path d={svgPaths.p3df18800} fill="var(--fill-0, #4CAFE8)" id="Vector" />
         </svg>
       </div>
-      <p className="absolute font-['TacticSans-ThnIt:Italic',_sans-serif] h-[18px] italic leading-[normal] left-[calc(50%-318px)] text-[#2d2d2d] text-[16px] top-[43px] w-[121px]">Oct 04, 2025</p>
+      <p className="absolute font-['TacticSans-ThnIt:Italic', sans-serif] h-[18px] italic leading-[normal] left-[calc(50%-318px)] text-[#2d2d2d] text-4 top-[43px] w-[121px]">Oct 04, 2025</p>
     </div>
   );
 }
@@ -146,7 +146,7 @@ function Group8() {
 function Group9() {
   return (
     <div className="absolute contents left-[225px] top-[42px]">
-      <p className="absolute font-['TacticSans-ThnIt:Italic',_sans-serif] h-[18px] italic leading-[normal] left-[calc(50%-137px)] text-[#2d2d2d] text-[16px] top-[43px] w-[92px]">12:00 PM</p>
+      <p className="absolute font-['TacticSans-ThnIt:Italic', sans-serif] h-[18px] italic leading-[normal] left-[calc(50%-137px)] text-[#2d2d2d] text-4 top-[43px] w-[92px]">12:00 PM</p>
       <div className="absolute inset-[9.05%_68.72%_86.64%_28.27%]" data-name="Vector">
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 24 20">
           <path d={svgPaths.p3def0600} fill="var(--fill-0, #4CAFE8)" id="Vector" />
@@ -159,7 +159,7 @@ function Group9() {
 function Group10() {
   return (
     <div className="absolute contents left-[383px] top-[33px]">
-      <div className="absolute font-['TacticSans-ThnIt:Italic',_sans-serif] h-[37px] italic leading-[normal] left-[calc(50%+15px)] text-[#2d2d2d] text-[16px] top-[33px] w-[217px]">
+      <div className="absolute font-['TacticSans-ThnIt:Italic', sans-serif] h-[37px] italic leading-[normal] left-[calc(50%+15px)] text-[#2d2d2d] text-4 top-[33px] w-[217px]">
         <p className="mb-0">{` Kingswood Play Centre, Basildon SS16 5AD`}</p>
         <p>&nbsp;</p>
       </div>
@@ -195,7 +195,7 @@ function VuesaxLinearArrowRight2() {
 
 function VuesaxLinearArrowRight3() {
   return (
-    <div className="relative size-[24px]" data-name="vuesax/linear/arrow-right">
+    <div className="relative size-6" data-name="vuesax/linear/arrow-right">
       <VuesaxLinearArrowRight2 />
     </div>
   );
@@ -203,9 +203,9 @@ function VuesaxLinearArrowRight3() {
 
 function Frame1116607031() {
   return (
-    <div className="absolute box-border content-stretch flex gap-[10px] h-[48px] items-center justify-center left-[539px] px-[26px] py-[12px] rounded-[100px] top-[375px]">
+    <div className="absolute box-border content-stretch flex gap-[10px] h-[48px] items-center justify-center left-[539px] px-[26px] py-3 rounded-[100px] top-[375px]">
       <div aria-hidden="true" className="absolute border-[#4cafe8] border-[3px] border-solid inset-0 pointer-events-none rounded-[100px]" />
-      <p className="font-['Plus_Jakarta_Sans:SemiBold',_sans-serif] font-semibold leading-[normal] relative shrink-0 text-[#2d2d2d] text-[18px] text-nowrap whitespace-pre">{`Join  Live`}</p>
+      <p className="font-['Plus_Jakarta_Sans:SemiBold', sans-serif] font-semibold leading-[normal] relative shrink-0 text-[#2d2d2d] text-[18px] text-nowrap whitespace-pre">{`Join  Live`}</p>
       <div className="flex h-[calc(1px*((var(--transform-inner-width)*0.6451825499534607)+(var(--transform-inner-height)*0.7640284895896912)))] items-center justify-center relative shrink-0 w-[calc(1px*((var(--transform-inner-height)*0.6451825499534607)+(var(--transform-inner-width)*0.7640284895896912)))]" style={{ "--transform-inner-width": "24", "--transform-inner-height": "24" } as React.CSSProperties}>
         <div className="flex-none rotate-[319.821deg]">
           <VuesaxLinearArrowRight3 />
@@ -219,8 +219,8 @@ function Frame2147226741() {
   return (
     <div className="absolute bg-white h-[464px] left-[calc(50%+274px)] overflow-clip shadow-[0px_0px_40px_10px_rgba(76,175,232,0.25)] top-[655px] translate-x-[-50%] w-[796px]">
       <Group8 />
-      <p className="absolute font-['TacticSans-MedIt:Italic',_sans-serif] h-[104px] italic leading-[normal] left-[calc(50%-350px)] text-[#2d2d2d] text-[48px] top-[86px] w-[669px]">Suffolk Region Couples Conference 2025</p>
-      <p className="absolute font-['TacticSans-RegIt:Italic',_sans-serif] h-[151px] italic leading-[normal] left-[calc(50%-350px)] text-[#2d2d2d] text-[24px] top-[214px] w-[633px]">
+      <p className="absolute font-['TacticSans-MedIt:Italic', sans-serif] h-[104px] italic leading-[normal] left-[calc(50%-350px)] text-[#2d2d2d] text-[48px] top-[86px] w-[669px]">Suffolk Region Couples Conference 2025</p>
+      <p className="absolute font-['TacticSans-RegIt:Italic', sans-serif] h-[151px] italic leading-[normal] left-[calc(50%-350px)] text-[#2d2d2d] text-6 top-[214px] w-[633px]">
         Love is God’s gift, and when anchored in Him, it flourishes beautifully. This October, join us for the Suffolk Region Couples Conference 2025 — a refreshing gathering designed to strengthen marriages, inspire hope ......<span className="text-[#5856d6]">see more</span>
       </p>
       <Group9 />
@@ -257,7 +257,7 @@ function Group11() {
           <path d={svgPaths.p3df18800} fill="var(--fill-0, #4CAFE8)" id="Vector" />
         </svg>
       </div>
-      <p className="absolute font-['TacticSans-ThnIt:Italic',_sans-serif] h-[18px] italic leading-[normal] left-[calc(50%-318px)] text-[#2d2d2d] text-[16px] top-[43px] w-[121px]">Oct 04, 2025</p>
+      <p className="absolute font-['TacticSans-ThnIt:Italic', sans-serif] h-[18px] italic leading-[normal] left-[calc(50%-318px)] text-[#2d2d2d] text-4 top-[43px] w-[121px]">Oct 04, 2025</p>
     </div>
   );
 }
@@ -265,7 +265,7 @@ function Group11() {
 function Group12() {
   return (
     <div className="absolute contents left-[225px] top-[42px]">
-      <p className="absolute font-['TacticSans-ThnIt:Italic',_sans-serif] h-[18px] italic leading-[normal] left-[calc(50%-137px)] text-[#2d2d2d] text-[16px] top-[43px] w-[92px]">12:00 PM</p>
+      <p className="absolute font-['TacticSans-ThnIt:Italic', sans-serif] h-[18px] italic leading-[normal] left-[calc(50%-137px)] text-[#2d2d2d] text-4 top-[43px] w-[92px]">12:00 PM</p>
       <div className="absolute inset-[9.05%_68.72%_86.64%_28.27%]" data-name="Vector">
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 24 20">
           <path d={svgPaths.p3def0600} fill="var(--fill-0, #4CAFE8)" id="Vector" />
@@ -278,7 +278,7 @@ function Group12() {
 function Group13() {
   return (
     <div className="absolute contents left-[383px] top-[33px]">
-      <div className="absolute font-['TacticSans-ThnIt:Italic',_sans-serif] h-[37px] italic leading-[normal] left-[calc(50%+15px)] text-[#2d2d2d] text-[16px] top-[33px] w-[217px]">
+      <div className="absolute font-['TacticSans-ThnIt:Italic', sans-serif] h-[37px] italic leading-[normal] left-[calc(50%+15px)] text-[#2d2d2d] text-4 top-[33px] w-[217px]">
         <p className="mb-0">{` Kingswood Play Centre, Basildon SS16 5AD`}</p>
         <p>&nbsp;</p>
       </div>
@@ -314,7 +314,7 @@ function VuesaxLinearArrowRight4() {
 
 function VuesaxLinearArrowRight5() {
   return (
-    <div className="relative size-[24px]" data-name="vuesax/linear/arrow-right">
+    <div className="relative size-6" data-name="vuesax/linear/arrow-right">
       <VuesaxLinearArrowRight4 />
     </div>
   );
@@ -322,9 +322,9 @@ function VuesaxLinearArrowRight5() {
 
 function Frame1116607032() {
   return (
-    <div className="absolute box-border content-stretch flex gap-[10px] h-[48px] items-center justify-center left-[539px] px-[26px] py-[12px] rounded-[100px] top-[375px]">
+    <div className="absolute box-border content-stretch flex gap-[10px] h-[48px] items-center justify-center left-[539px] px-[26px] py-3 rounded-[100px] top-[375px]">
       <div aria-hidden="true" className="absolute border-[#4cafe8] border-[3px] border-solid inset-0 pointer-events-none rounded-[100px]" />
-      <p className="font-['Plus_Jakarta_Sans:SemiBold',_sans-serif] font-semibold leading-[normal] relative shrink-0 text-[#2d2d2d] text-[18px] text-nowrap whitespace-pre">{`Join  Live`}</p>
+      <p className="font-['Plus_Jakarta_Sans:SemiBold', sans-serif] font-semibold leading-[normal] relative shrink-0 text-[#2d2d2d] text-[18px] text-nowrap whitespace-pre">{`Join  Live`}</p>
       <div className="flex h-[calc(1px*((var(--transform-inner-width)*0.6451825499534607)+(var(--transform-inner-height)*0.7640284895896912)))] items-center justify-center relative shrink-0 w-[calc(1px*((var(--transform-inner-height)*0.6451825499534607)+(var(--transform-inner-width)*0.7640284895896912)))]" style={{ "--transform-inner-width": "24", "--transform-inner-height": "24" } as React.CSSProperties}>
         <div className="flex-none rotate-[319.821deg]">
           <VuesaxLinearArrowRight5 />
@@ -338,8 +338,8 @@ function Frame2147226743() {
   return (
     <div className="absolute bg-white h-[464px] left-[calc(50%+274px)] overflow-clip shadow-[0px_0px_40px_10px_rgba(76,175,232,0.25)] top-[1257px] translate-x-[-50%] w-[796px]">
       <Group11 />
-      <p className="absolute font-['TacticSans-MedIt:Italic',_sans-serif] h-[104px] italic leading-[normal] left-[calc(50%-350px)] text-[#2d2d2d] text-[48px] top-[86px] w-[669px]">Suffolk Region Couples Conference 2025</p>
-      <p className="absolute font-['TacticSans-RegIt:Italic',_sans-serif] h-[151px] italic leading-[normal] left-[calc(50%-350px)] text-[#2d2d2d] text-[24px] top-[214px] w-[633px]">
+      <p className="absolute font-['TacticSans-MedIt:Italic', sans-serif] h-[104px] italic leading-[normal] left-[calc(50%-350px)] text-[#2d2d2d] text-[48px] top-[86px] w-[669px]">Suffolk Region Couples Conference 2025</p>
+      <p className="absolute font-['TacticSans-RegIt:Italic', sans-serif] h-[151px] italic leading-[normal] left-[calc(50%-350px)] text-[#2d2d2d] text-6 top-[214px] w-[633px]">
         Love is God’s gift, and when anchored in Him, it flourishes beautifully. This October, join us for the Suffolk Region Couples Conference 2025 — a refreshing gathering designed to strengthen marriages, inspire hope ......<span className="text-[#5856d6]">see more</span>
       </p>
       <Group12 />

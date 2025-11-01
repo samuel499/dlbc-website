@@ -54,19 +54,19 @@ function ServiceCard({
     >
       {/* Card Body */}
       <motion.div 
-        className={`relative md:absolute ${hasShadow ? 'bg-[#f4faf8] shadow-[0px_0px_40px_10px_rgba(76,175,232,0.25)]' : 'bg-[#fdfdfd]'} h-auto md:h-[450px] left-0 overflow-visible md:overflow-clip top-[64px] w-full md:w-[660px] p-6 md:p-0`}
+        className={`relative md:absolute ${hasShadow ? 'bg-[#f4faf8] shadow-[0px_0px_40px_10px_rgba(76,175,232,0.25)]' : 'bg-[#fdfdfd]'} h-auto md:h-[450px] left-0 overflow-visible md:overflow-clip top-16 w-full md:w-[660px] p-6 md:p-0`}
         whileHover={{ y: -10, boxShadow: '0px 10px 50px 15px rgba(76,175,232,0.3)' }}
         transition={{ duration: 0.3 }}
       >
         <motion.p 
-          className="font-['TacticSans-MedIt:Italic',_sans-serif] italic leading-[normal] text-[#2d2d2d] text-[32px] sm:text-[40px] md:text-[48px] md:absolute md:h-[116px] md:left-[calc(50%-272px)] md:top-[calc(50%-112px)] md:w-[521px] mb-4 md:mb-0"
+          className="font-['TacticSans-MedIt:Italic', sans-serif] italic leading-[normal] text-[#2d2d2d] text-[32px] sm:text-[40px] md:text-[48px] md:absolute md:h-[116px] md:left-[calc(50%-272px)] md:top-[calc(50%-112px)] md:w-[521px] mb-4 md:mb-0"
           animate={isHovered ? { x: 8 } : { x: 0 }}
           transition={{ duration: 0.3 }}
         >
           {title}
         </motion.p>
         <motion.p 
-          className={`font-['TacticSans-RegIt:Italic',_sans-serif] italic leading-[normal] text-[#2d2d2d] text-[20px] sm:text-[26px] md:text-[32px] md:absolute md:h-[151px] md:left-[calc(50%-272px)] md:top-[calc(50%+20px)] mb-4 md:mb-0 ${
+          className={`font-['TacticSans-RegIt:Italic', sans-serif] italic leading-[normal] text-[#2d2d2d] text-[20px] sm:text-[26px] md:text-[32px] md:absolute md:h-[151px] md:left-[calc(50%-272px)] md:top-[calc(50%+20px)] mb-4 md:mb-0 ${
             day === 'TUESDAY' ? 'md:w-[492px]' : 'md:w-[457px]'
           }`}
           animate={isHovered ? { x: 8 } : { x: 0 }}
@@ -84,7 +84,7 @@ function ServiceCard({
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 256 242">
             <ellipse cx="128" cy="121" fill={circleFill} rx="128" ry="121" />
           </svg>
-          <div className="absolute font-['TacticSans-MedIt:Italic',_sans-serif] italic leading-[normal] text-[20px] md:text-[24px] text-center text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[152px]">
+          <div className="absolute font-['TacticSans-MedIt:Italic', sans-serif] italic leading-[normal] text-[20px] md:text-6 text-center text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[152px]">
             <p className="mb-0">{time.split('\n')[0]} </p>
             <p className="mb-0">-</p>
             <p>{time.split('\n')[1]}</p>
@@ -102,11 +102,11 @@ function ServiceCard({
       >
         <div className={`${dayBg} h-[90px] md:h-[118px] relative w-full md:w-[316px]`}>
           <div className="h-[90px] md:h-[118px] overflow-clip relative rounded-[inherit] w-full md:w-[316px]">
-            <p className={`absolute font-['TacticSans-UltIt:Italic',_sans-serif] italic leading-[normal] text-[36px] md:text-[48px] text-white text-center left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2`}>
+            <p className={`absolute font-['TacticSans-UltIt:Italic', sans-serif] italic leading-[normal] text-[36px] md:text-[48px] text-white text-center left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2`}>
               {day}
             </p>
           </div>
-          <div aria-hidden="true" className={`absolute border-2 ${borderColor} border-dashed inset-[-2px] pointer-events-none`} />
+          <div aria-hidden="true" className={`absolute border-2 ${borderColor} border-dashed -inset-0.5 pointer-events-none`} />
         </div>
       </motion.div>
     </motion.div>
@@ -123,7 +123,7 @@ export function WorshipWithUsSection() {
         
         {/* Watermark Background Text */}
         <motion.p 
-          className="absolute font-['TacticSans-UltIt:Italic',_sans-serif] italic leading-[normal] text-[60px] sm:text-[120px] md:text-[200px] text-[rgba(45,45,45,0.15)] top-0 left-4 md:left-[calc(50%-798.5px)] w-full md:w-[1195px] pointer-events-none"
+          className="absolute font-['TacticSans-UltIt:Italic', sans-serif] italic leading-[normal] text-[60px] sm:text-[120px] md:text-[200px] text-[rgba(45,45,45,0.15)] top-0 left-4 md:left-[calc(50%-798.5px)] w-full md:w-[1195px] pointer-events-none"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 0.15 } : { opacity: 0 }}
           transition={{ duration: 1.5, delay: 0.2 }}
@@ -133,7 +133,7 @@ export function WorshipWithUsSection() {
 
         {/* "Come and Be Blessed" Heading */}
         <motion.p 
-          className="relative md:absolute font-['TacticSans-MedIt:Italic',_sans-serif] italic leading-[normal] text-[#2d2d2d] text-[48px] sm:text-[72px] md:text-[96px] mb-12 md:mb-0 md:left-[calc(50%+80.5px)] md:top-[calc(50%-536px)] w-full md:w-[491.963px]"
+          className="relative md:absolute font-['TacticSans-MedIt:Italic', sans-serif] italic leading-[normal] text-[#2d2d2d] text-[48px] sm:text-[72px] md:text-[96px] mb-12 md:mb-0 md:left-[calc(50%+80.5px)] md:top-[calc(50%-536px)] w-full md:w-[491.963px]"
           initial={{ opacity: 0, x: -60 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -60 }}
           transition={{ duration: 1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
@@ -210,7 +210,7 @@ export function WorshipWithUsSection() {
 
         {/* Scripture Quote */}
         <motion.div 
-          className="relative md:absolute font-['TacticSans-UltIt:Italic',_sans-serif] italic leading-[normal] text-[#1c4e80] text-[24px] sm:text-[30px] md:text-[36px] text-center md:text-right mt-12 md:mt-0 md:left-[calc(50%+656.5px)] md:top-[calc(50%+662px)] md:translate-x-[-100%] w-full md:w-[602px] z-20"
+          className="relative md:absolute font-['TacticSans-UltIt:Italic', sans-serif] italic leading-[normal] text-[#1c4e80] text-6 sm:text-[30px] md:text-[36px] text-center md:text-right mt-12 md:mt-0 md:left-[calc(50%+656.5px)] md:top-[calc(50%+662px)] md:-translate-x-full w-full md:w-[602px] z-20"
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
           transition={{ duration: 1, delay: 1.2, ease: [0.22, 1, 0.36, 1] }}

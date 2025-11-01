@@ -46,7 +46,7 @@ function After() {
 function TiAngleUp() {
   return (
     <div className="absolute h-[10px] left-[calc(50%-0.09px)] top-[13.33px] translate-x-[-50%] w-[8.993px]" data-name="ti-angle-up">
-      <p className="absolute font-['Inter:Regular',_'Noto_Sans:Regular',_sans-serif] font-normal leading-[9px] left-[4.5px] not-italic text-[9px] text-center text-white top-0 translate-x-[-50%] w-[8.993px]"></p>
+      <p className="absolute font-['Inter:Regular',_'Noto_Sans:Regular', sans-serif] font-normal leading-[9px] left-[4.5px] not-italic text-[9px] text-center text-white top-0 translate-x-[-50%] w-[8.993px]"></p>
     </div>
   );
 }
@@ -90,12 +90,12 @@ export default function Frame2121453189() {
       </div>
       <div className="absolute flex h-[115px] items-center justify-center left-[calc(50%+162px)] top-[746px] w-[510px]">
         <div className="flex-none scale-y-[-100%]">
-          <p className="font-['TacticSans-UltIt:Italic',_sans-serif] h-[115px] italic leading-[normal] relative text-[#2d2d2d] text-[96px] w-[510px]">About us</p>
+          <p className="font-['TacticSans-UltIt:Italic', sans-serif] h-[115px] italic leading-[normal] relative text-[#2d2d2d] text-[96px] w-[510px]">About us</p>
         </div>
       </div>
       <div className="absolute flex h-[464px] items-center justify-center left-[calc(50%+672px)] top-[234px] translate-x-[-100%] w-[802px]">
         <div className="flex-none scale-y-[-100%]">
-          <p className="font-['TacticSans-RegIt:Italic',_sans-serif] h-[464px] italic leading-[normal] relative text-[#2d2d2d] text-[48px] text-right w-[802px]">We’re a Bible-rooted, prayerful community committed to discipleship, worship and local outreach. Our ministry has grown through committed Bible teaching and practical service to families and communities.</p>
+          <p className="font-['TacticSans-RegIt:Italic', sans-serif] h-[464px] italic leading-[normal] relative text-[#2d2d2d] text-[48px] text-right w-[802px]">We’re a Bible-rooted, prayerful community committed to discipleship, worship and local outreach. Our ministry has grown through committed Bible teaching and practical service to families and communities.</p>
         </div>
       </div>
       <div className="absolute flex h-[100px] items-center justify-center left-[990px] top-[86px] w-[295px]">

@@ -33,7 +33,7 @@ export function BackToTopButton() {
       {isVisible && (
         <motion.button
           onClick={scrollToTop}
-          className="fixed left-[20px] md:left-[40px] bottom-[40px] md:bottom-[60px] bg-[#4cafe8] hover:bg-[#3ba3d9] h-[50px] w-[50px] md:h-[60px] md:w-[60px] rounded-full flex items-center justify-center cursor-pointer transition-colors duration-300 z-50 shadow-lg"
+          className="fixed left-5 md:left-10 bottom-10 md:bottom-[60px] bg-[#4cafe8] hover:bg-[#3ba3d9] h-[50px] w-[50px] md:h-[60px] md:w-[60px] rounded-full flex items-center justify-center cursor-pointer transition-colors duration-300 z-50 shadow-lg"
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0 }}
@@ -42,7 +42,7 @@ export function BackToTopButton() {
           transition={{ duration: 0.3, ease: "easeOut" }}
           aria-label="Back to top"
         >
-          <ChevronUp className="text-white w-[24px] h-[24px] md:w-[28px] md:h-[28px]" strokeWidth={3} />
+          <ChevronUp className="text-white w-6 h-6 md:w-7 md:h-7" strokeWidth={3} />
         </motion.button>
       )}
     </AnimatePresence>
