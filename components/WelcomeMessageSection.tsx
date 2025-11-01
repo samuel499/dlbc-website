@@ -8,7 +8,7 @@ import Image from "next/image";
 
 function Frame2121453200() {
   return (
-    <div className="bg-[#1c4e80] rounded-2xl md:rounded-3xl p-4 md:p-6 lg:p-8 w-full max-w-full md:max-w-[820px] mx-auto">
+    <div className="bg-[#1c4e80] rounded-2xl md:rounded-3xl p-4 md:p-6 lg:p-8 w-full max-w-full md:max-w-[820px] lg:max-w-[500px] mx-auto shadow-lg">
       <p className="font-['TacticSans-MedIt:Italic', sans-serif] italic leading-relaxed text-[#f1f1f1] text-sm sm:text-base md:text-lg lg:text-xl text-center">
         "And they continued stedfastly in the apostles' doctrine and fellowship, and in breaking of bread, and in prayers." — Acts 2:42 (KJV)
       </p>
@@ -97,8 +97,9 @@ export function WelcomeMessageSection() {
               (PASTOR PEACE)
             </motion.p>
 
-            {/* Scripture Quote Box */}
+            {/* Scripture Quote Box - Mobile only */}
             <motion.div
+              className="lg:hidden"
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.8, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
@@ -107,7 +108,7 @@ export function WelcomeMessageSection() {
             </motion.div>
           </div>
 
-          {/* Right Side - Pastor Image */}
+          {/* Right Side - Pastor Image with Overlapping Scripture Box */}
           <motion.div 
             className="hidden lg:block relative shrink-0 w-full lg:w-[400px] xl:w-[550px] h-[600px] xl:h-[700px] mt-8 lg:mt-0" 
             data-name="southend 1"
@@ -115,13 +116,23 @@ export function WelcomeMessageSection() {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="relative w-full h-full overflow-hidden rounded-2xl">
+            <div className="relative w-full h-full overflow-visible rounded-2xl">
               <Image 
                 alt="Pastor Peace" 
-                className="object-cover object-top w-full h-full scale-110 mt-6" 
+                className="object-cover object-top w-full h-full scale-110 mt-6 rounded-2xl" 
                 src={imgSouthend1}
                 priority
               />
+              
+              {/* Scripture Box Overlapping Bottom Right of Image */}
+              <motion.div
+                className="absolute bottom-[-30px] right-[-40px] z-20"
+                initial={{ opacity: 0, y: 30, x: 30 }}
+                animate={isInView ? { opacity: 1, y: 0, x: 0 } : { opacity: 0, y: 30, x: 30 }}
+                transition={{ duration: 0.8, delay: 1, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <Frame2121453200 />
+              </motion.div>
             </div>
           </motion.div>
 
