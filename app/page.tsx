@@ -218,28 +218,22 @@ function Frame4() {
   );
 }
 
+
 function Frame2() {
   return (
-    <div className="bg-[#1c4e80] h-20 md:h-[100px] lg:h-[143.534px] overflow-clip relative w-40 md:w-[200px] lg:w-[307.178px]">
-      <div
-        className="absolute flex h-[calc(1px*((var(--transform-inner-width)*0.7666651606559753)+(var(--transform-inner-height)*0.6420471668243408)))] items-center justify-center left-[30px] md:left-10 lg:left-[55.24px] top-[calc(50%+14px)] md:top-[calc(50%+16px)] lg:top-[calc(50%+18.969px)] translate-y-[-50%] w-[calc(1px*((var(--transform-inner-height)*0.7666651606559753)+(var(--transform-inner-width)*0.6420471668243408)))]"
-        style={
-          {
-            "--transform-inner-width": "57",
-            "--transform-inner-height": "46",
-          } as React.CSSProperties
-        }
-      >
-        <div className="flex-none rotate-[50.055deg]">
+    <div className="bg-[#1c4e80] h-20 md:h-[100px] lg:h-[143.534px] overflow-visible relative w-40 md:w-[200px] lg:w-[307.178px]">
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+        <div className="rotate-[50.055deg]">
           <div
-            className="h-9 md:h-[42px] lg:h-[46px] relative w-11 md:w-[52px] lg:w-[57px]"
+            className="h-12 md:h-[42px] lg:h-[46px] relative w-14 md:w-[52px] lg:w-[57px]"
             data-name="dlbc 1"
           >
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="relative overflow-hidden pointer-events-none w-full h-full">
               <Image
                 alt="Deeper Life Bible Church Logo"
-                className="absolute h-[111.38%] left-0 max-w-none top-[-0.26%] w-full"
+                className="object-contain w-full h-full"
                 src={imgDlbc1}
+                priority
               />
             </div>
           </div>
@@ -277,18 +271,9 @@ function ScrollingText() {
         </motion.div>
       </div>
 
-      <div
-        className="absolute flex h-[calc(1px*((var(--transform-inner-width)*0.7666651606559753)+(var(--transform-inner-height)*0.6420471668243408)))] items-center justify-center left-[-50px] lg:left-[-78.6px] top-[-100px] md:left-[-120px] lg:top-[-193.86px] w-[calc(1px*((var(--transform-inner-height)*0.7666651606559753)+(var(--transform-inner-width)*0.6420471668243408)))]"
-        style={
-          {
-            "--transform-inner-width": "307.171875",
-            "--transform-inner-height": "143.53125",
-          } as React.CSSProperties
-        }
-      >
-        <div className="flex-none rotate-[309.945deg]">
-          <Frame2 />
-        </div>
+      {/* Simplified logo positioning for mobile */}
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 rotate-[309.945deg] origin-center">
+        <Frame2 />
       </div>
     </div>
   );
