@@ -249,10 +249,18 @@ function ScrollingText() {
 
   return (
     <div className="absolute bg-[#4cafe8] h-10 md:h-[60px] left-0 overflow-hidden top-0 w-full z-30">
-      <div className="absolute flex items-center h-full">
+      {/* Logo at the very left edge - acts as a mask */}
+      <div className="absolute left-0 top-0 h-full z-20 bg-[#4cafe8]">
+        <div className="relative top-1/2 -translate-y-1/2 rotate-[309.945deg] origin-center">
+          <Frame2 />
+        </div>
+      </div>
+
+      {/* Scrolling text container - positioned to start after logo */}
+      <div className="absolute flex items-center h-full left-0 right-0 overflow-hidden">
         <motion.div
           className="flex items-center whitespace-nowrap"
-          animate={{ x: [0, -1440] }}
+          animate={{ x: ["100%", "-100%"] }}
           transition={{
             duration: 20,
             repeat: Infinity,
@@ -269,11 +277,6 @@ function ScrollingText() {
             {text}
           </p>
         </motion.div>
-      </div>
-
-      {/* Simplified logo positioning for mobile */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 rotate-[309.945deg] origin-center">
-        <Frame2 />
       </div>
     </div>
   );

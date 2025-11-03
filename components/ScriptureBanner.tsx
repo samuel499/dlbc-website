@@ -26,7 +26,7 @@ export function ScriptureBanner({
       className="relative w-full h-[400px] md:h-[500px] overflow-hidden"
     >
       {/* Background Image with Opacity */}
-      <div className="absolute inset-0 bg-[#1c4e80]/20">
+      <div className="absolute inset-0 bg-[#1c4e80]">
         <Image
           src={imageSrc}
           alt={imageAlt}
@@ -37,7 +37,7 @@ export function ScriptureBanner({
       </div>
 
       {/* Overlay Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#1c4e80]/40 to-[#4cafe8]/40" />
+      {/* <div className="absolute inset-0 bg-gradient-to-b from-[#1c4e80]/40 to-[#4cafe8]/40" /> */}
 
       {/* Content */}
       <div className="relative z-10 flex items-center justify-center h-full px-4 md:px-8">
