@@ -114,7 +114,7 @@ function ServiceCard({
 
         {/* Time Circle - Inside the card, positioned at bottom-right, partially cut off */}
         <motion.div
-          className="absolute bottom-[-40px] md:bottom-[-45px] right-[-40px] md:right-[-50px] h-40 md:h-[180px] w-40 md:w-[180px]"
+          className="absolute -bottom-10 md:bottom-[-45px] -right-10 md:right-[-50px] h-40 md:h-[180px] w-40 md:w-[180px]"
           animate={
             isHovered ? { scale: 1.1, rotate: 5 } : { scale: 1, rotate: 0 }
           }
