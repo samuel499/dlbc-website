@@ -365,7 +365,6 @@ export default function App() {
               { src: imgGallery11.src, alt: "Fellowship time" },
               { src: imgGallery12.src, alt: "Fellowship time" },
               { src: imgGallery13.src, alt: "Fellowship time" },
-              // { src: imgGallery18.src, alt: "Fellowship time" },
             ]}
             title="Moments of Fellowship,"
             subtitle="Memories of Faith"
